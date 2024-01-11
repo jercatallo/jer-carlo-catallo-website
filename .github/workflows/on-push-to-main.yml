@@ -22,7 +22,7 @@ jobs:
 
     - name: Authenticate Docker with ECR
       run: |
-        aws ecr-public get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}
+        aws ${{secrets.AWS_ECR_VISIBILITY}} get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}
       env:
         AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
@@ -47,4 +47,4 @@ jobs:
           docker stop ${{secrets.AWS_REPOSITORY_URI}} || true
           docker rm ${{secrets.AWS_REPOSITORY_URI}} || true
           docker pull ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
-          docker run -d --name ${{secrets.AWS_REPOSITORY_URI}} -p 80:80 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+          docker run -d --name ${{secrets.AWS_REPOSITORY_URI}} -p ${{secrets.AWS_CONTAINER_PORT}}:${{secrets.AWS_CONTAINER_PORT}} ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
