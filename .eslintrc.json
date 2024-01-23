@@ -1,6 +1,7 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "eol-last": ["error", "always"]
+    "eol-last": ["error", "always"],
+    "semi": ["error", "always"]
   }
 }
