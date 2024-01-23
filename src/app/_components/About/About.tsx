@@ -44,7 +44,7 @@ export const About = () => {
 
                     </div>
                     <Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0 } }}>
-                        <Image className='my-image rounded max-w-xs h-auto w-auto rotate-2 m-auto bordered py-4 md:py-0' src='/assets/full-body.jpg' width={300} height={300} alt='My Image'></Image>
+                        <Image className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 md:py-0' src='/assets/full-body.png' width={300} height={300} alt='My Image'></Image>
                     </Div>
                 </section>
             </div>

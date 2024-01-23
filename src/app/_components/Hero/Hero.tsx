@@ -56,7 +56,7 @@ export const Hero = () => {
                                     exit: { opacity: 0, y: -20 },
                                 },
                                 transition: { duration: 1, delay: 1 }
-                            }} overrides='text-md py-1 md:text-sm bordered border-main-light border-solid border-2 rounded px-2 flex items-center text-main-light border-main-light'> <Image className='' src='/assets/philippines-icon.png' width={20} height={20} alt='My Image' /> +63 961 800 4628</Span>
+                            }} overrides='text-md py-1 md:text-sm bordered border-main-light border-solid border-2 rounded px-2 flex items-center text-main-light border-main-light'> <Image className='' src='/assets/philippines-icon.png' width={20} height={20} alt='Philippines Icon' /> +63 961 800 4628</Span>
                         </div>
                     </section>
                 </div>
