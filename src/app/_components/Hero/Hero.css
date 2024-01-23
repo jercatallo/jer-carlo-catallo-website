@@ -1,0 +1,10 @@
+.parallax-container {
+    background: url('/assets/hero-bg.png') center/cover no-repeat fixed;
+  }
+  .bouncing-div {
+    width: 30px;
+    height: 30px;
+    color: #3498db;
+    border-radius: 50%;
+    animation: bounce 1s infinite alternate;
+  }

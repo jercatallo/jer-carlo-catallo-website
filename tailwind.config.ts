@@ -1,19 +1,13 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/design-system/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
     screens: {
       'sm': '640px',      // Small screens (e.g., mobile phones)
       'md': '768px',      // Medium screens (e.g., tablets)
@@ -23,29 +17,29 @@ const config: Config = {
     },
     colors: {
       // Primary Colors
-      primaryColor: '#F3CB14', 
-      secondaryColor: '#4C5C54',
+      ['primary-color']: '#0175FA',
+      ['primary-color-2']: '#0064D6',
+      ['primary-color-3']: '#0051AD',
+      ['primary-color-4']: '#003E85',
+      ['primary-color-5']: '#002B5C',
+      accent: '#01f9fc',
 
       // Background Colors
-      primaryBackgroundColor: '#ffffff', // White
-      secondaryBackgroundColor: '#f5f5f5', // Light Gray
+      background: '#ffffff', // White
+      surface: '#000000', // Black
 
       // Text Colors
-      primaryText: '#4F4F4F', // Dark Gray
-      secondaryText: '#777', // Light Gray
-
-      // Text on Background Colors (for readability)  
-      textOnPrimaryBackground: '#ffffff',
-      textOnSecondaryBackground: '#ffffff',
-
-      // Accent Colors
-      accentColor: '#F2E413',
+      main: '#000000', // Black
+      ['main-light']: '#585858',
+      light: '#ffffff', // White
+      ['on-primary']: '#ffffff',
     },
-    // fontFamily: {
-    //   sans: ['Graphik', 'sans-serif'],
-    //   serif: ['Merriweather', 'serif'],
-    // },
+    fontFamily: {
+      ['heading']: ['Montserrat', 'sans-serif'],
+      ['body']: ['Inter', 'sans-serif'],
+    },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;
