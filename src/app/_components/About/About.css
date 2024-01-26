@@ -22,8 +22,10 @@
   color: transparent;
 }
 
-.parallax-container-about {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/forest.jpg") center/cover no-repeat fixed;
+.bouncing-div {
+  width: 30px;
+  height: 30px;
+  color: #3498db;
+  border-radius: 50%;
+  animation: bounce 1s infinite alternate;
 }
-

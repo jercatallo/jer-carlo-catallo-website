@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Heading, Paragraph } from '@/design-system';
+import { ArrowDownIcon, Button, Heading, Paragraph } from '@/design-system';
 import './About.css';
 import Image from 'next/image';
 import { InfoBox, InfoBoxContainer, TechSkill } from './components';
@@ -10,7 +10,8 @@ import { Div } from '@/design-system/Div';
 export const About = () => {
 
     return (
-        <div className="snap-align-none md:snap-center parallax-container-about relative bg-center bg-no-repeat h-fit md:h-screen flex items-center content-center">
+        <div style={{background: `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`}} className="snap-align-none md:snap-center relative bg-center bg-no-repeat h-fit md:h-screen grid items-center content-end">
             <div className='about overflow-hidden max-w-6xl justify-center mx-auto p-1 relative grid items-center content-center' >
                 <section className='mt-12 grid p-4 py-8 md:py-4 md:grid-cols-2 content-center items-center'>
                     <div>
@@ -44,10 +45,12 @@ export const About = () => {
 
                     </div>
                     <Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0 } }}>
-                        <Image className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 md:py-0' src='/assets/full-body.png' width={300} height={300} alt='My Image'></Image>
+                        <Image className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 md:py-0' src={`${process.env.IMAGE_URL}/full-body.jpg`} width={300} height={300} alt='My Image'></Image>
                     </Div>
                 </section>
+               
             </div>
+            <ArrowDownIcon styleClasses='animate-bounce bouncing-div mx-auto mt-auto'></ArrowDownIcon>
         </div>
     );
 };
