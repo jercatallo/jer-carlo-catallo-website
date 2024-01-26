@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-env:
-    DAY_OF_WEEK: Monday
-  
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -27,9 +24,9 @@ jobs:
       - name: Load Environment Variables
         run: |
           echo "Loading environment variables..."
-          echo "IMAGE_URL=${vars.IMAGE_URL}" >> .env
-          echo "IMAGE_URL_HOSTNAME=${vars.IMAGE_URL_HOSTNAME}" >> .env
-          echo "IMAGE_URL_PROTOCOL=${vars.IMAGE_URL_PROTOCOL}" >> .env
+          echo "IMAGE_URL=${{vars.IMAGE_URL}}" >> .env
+          echo "IMAGE_URL_HOSTNAME=${{vars.IMAGE_URL_HOSTNAME}}" >> .env
+          echo "IMAGE_URL_PROTOCOL=${{vars.IMAGE_URL_PROTOCOL}}" >> .env
 
       - name: Check Linting with ESLint
         run: npm run lint
