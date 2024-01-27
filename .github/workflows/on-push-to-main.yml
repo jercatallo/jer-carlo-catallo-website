@@ -54,15 +54,18 @@ jobs:
           set -e # Exit immediately if a command exits with a non-zero status
 
           # Stop and remove existing container if it exists, ignoring errors
-          sudo docker stop ${{secrets.AWS_REPOSITORY_URI}} || true
-          sudo docker rm ${{secrets.AWS_REPOSITORY_URI}} || true
+          sudo docker stop ${{secrets.HTTP_CONTAINER_NAME}} || true
+          sudo docker rm ${{secrets.HTTP_CONTAINER_NAME}} || true
+
+          sudo docker stop ${{secrets.HTTPS_CONTAINER_NAME}} || true
+          sudo docker rm ${{secrets.HTTPS_CONTAINER_NAME}} || true
 
           # Pull the latest Docker image from the ECR repository
           sudo docker pull ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
 
           # Run the Docker container
-          sudo docker run -d --name ${{secrets.AWS_REPOSITORY_URI}} -p 80:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
-          sudo docker run -d --name ${{secrets.AWS_REPOSITORY_URI}} -p 443:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+          sudo docker run -d --name ${{secrets.HTTP_CONTAINER_NAME}} -p 80:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+          sudo docker run -d --name ${{secrets.HTTPS_CONTAINER_NAME}} -p 443:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
 
     - name: Cleanup Unused Docker Resources
       run: |
