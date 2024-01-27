@@ -55,10 +55,13 @@ jobs:
 
           # Stop and remove existing container if it exists, ignoring errors
           sudo docker stop ${{secrets.HTTP_CONTAINER_NAME}} || true
-          sudo docker rm ${{secrets.HTTP_CONTAINER_NAME}} || true
+          sudo docker rm -f ${{secrets.HTTP_CONTAINER_NAME}} || true
 
           sudo docker stop ${{secrets.HTTPS_CONTAINER_NAME}} || true
-          sudo docker rm ${{secrets.HTTPS_CONTAINER_NAME}} || true
+          sudo docker rm -f ${{secrets.HTTPS_CONTAINER_NAME}} || true
+
+          # Remove existing Docker image
+          sudo docker rmi -f ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
 
           # Pull the latest Docker image from the ECR repository
           sudo docker pull ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
