@@ -60,7 +60,7 @@ export const Hero = () => {
                         </div>
                     </section>
                 </div>
-            <ArrowDownIcon styleClasses='animate-bounce bouncing-div mx-auto mt-auto'></ArrowDownIcon>
+            <ArrowDownIcon styleClasses='animate-bounce bouncing-div mx-auto mt-auto text-primary-color pb-1'></ArrowDownIcon>
 
             </div>
         </div>

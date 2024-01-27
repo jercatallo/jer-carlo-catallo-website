@@ -12,9 +12,9 @@ export const About = () => {
 
     return (
         <div style={{background: `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`}} className="snap-align-none md:snap-center relative bg-center bg-no-repeat h-fit md:h-screen grid items-center content-end">
-            <div className='about overflow-hidden max-w-6xl justify-center mx-auto p-1 relative grid items-center content-center' >
-                <section className='mt-12 grid p-4 py-8 md:py-4 md:grid-cols-2 content-center items-center'>
+        url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`}} className="snap-align-none md:snap-center relative bg-center bg-no-repeat h-fit md:h-screen grid items-center">
+            <div className='about overflow-hidden max-w-6xl justify-center mx-auto p-1 relative grid items-center' >
+                <section className='mt-12 grid p-4 py-8 md:py-4 md:grid-cols-2 items-center'>
                     <div>
                         <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5 } }} overrides='text-3xl mt-0 text-light mb-3'>
                             Hi there, I&apos;m Jer!
@@ -51,7 +51,7 @@ export const About = () => {
                 </section>
                
             </div>
-            <ArrowDownIcon styleClasses='animate-bounce bouncing-div mx-auto mt-auto'></ArrowDownIcon>
+            <ArrowDownIcon styleClasses='animate-bounce bouncing-div mx-auto mt-auto text-light pb-1'></ArrowDownIcon>
         </div>
     );
 };

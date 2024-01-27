@@ -51,7 +51,19 @@ jobs:
         username: ${{secrets.AWS_EC2_USERNAME}}
         key: ${{secrets.AWS_EC2_PRIVATE_KEY}}
         script: |
-          docker stop ${{secrets.AWS_REPOSITORY_URI}} || true
-          docker rm ${{secrets.AWS_REPOSITORY_URI}} || true
-          docker pull ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
-          docker run -d --name ${{secrets.AWS_REPOSITORY_URI}} -p ${{secrets.AWS_CONTAINER_PORT}}:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+          set -e # Exit immediately if a command exits with a non-zero status
+
+          # Stop and remove existing container if it exists, ignoring errors
+          sudo docker stop ${{secrets.AWS_REPOSITORY_URI}} || true
+          sudo docker rm ${{secrets.AWS_REPOSITORY_URI}} || true
+
+          # Pull the latest Docker image from the ECR repository
+          sudo docker pull ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+
+          # Run the Docker container
+          sudo docker run -d --name ${{secrets.AWS_REPOSITORY_URI}} -p ${{secrets.AWS_CONTAINER_PORT}}:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+
+    - name: Cleanup Unused Docker Resources
+      run: |
+        # Prune unused Docker resources to free up space
+        sudo docker system prune -f
