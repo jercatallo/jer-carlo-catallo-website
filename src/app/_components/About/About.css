@@ -22,8 +22,3 @@
   color: transparent;
 }
 
-.bouncing-div {
-  width: 30px;
-  height: 30px;
-  animation: bounce 1s infinite alternate;
-}

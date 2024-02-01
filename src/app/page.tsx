@@ -8,12 +8,6 @@ const Navigation = dynamic(
 
 export default function Home() {
 
-  /**
-   * TODO:
-   *  Navigation Hamburger Menu functionality
-   *  Navigation on click handlers
-   */
-
   return (
     <div className='relative'>
       <header className='relative'>

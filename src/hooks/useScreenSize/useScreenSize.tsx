@@ -1,26 +1,36 @@
 import { useState, useEffect } from 'react';
 
-export const useScreenSize = () => {
-  const [screenSize, setScreenSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+export interface ScreenSize {
+  width: number;
+  height: number;
+}
+
+const getWindowSize = (): ScreenSize => ({
+  width: window?.innerWidth || 0,
+  height: window?.innerHeight || 0,
+});
+
+export const useScreenSize = (): ScreenSize => {
+  const [screenSize, setScreenSize] = useState<ScreenSize>(getWindowSize);
 
   const handleResize = () => {
-    setScreenSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    setScreenSize(getWindowSize);
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    // Check if window is defined before accessing properties
+    if (typeof window !== 'undefined') {
+      setScreenSize(getWindowSize);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      // Add event listener for window resize
+      window.addEventListener('resize', handleResize);
+
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []); // Empty dependency array to run the effect only once on mount
 
   return screenSize;
 };
