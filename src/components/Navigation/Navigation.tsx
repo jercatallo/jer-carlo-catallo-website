@@ -71,17 +71,27 @@ function Navigation() {
 
   useEffect(() => {
     Logger.info("screenSize", screenSize);
-
+    Logger.info("window", window);
+    Logger.info("document.readyState", document.readyState);
+    
+    function addScrollListener() {
+      if (typeof window !== 'undefined' && document.readyState === 'complete') {
+        if (timerRef.current !== undefined) {
+          clearTimeout(timerRef.current);
+        }
+        document.removeEventListener('scroll', handleScroll);
+        document.addEventListener('scroll', handleScroll, true);
+        Logger.info("addEventListener scroll");
+      } else {
+        // If window is still undefined, retry after a delay
+        setTimeout(addScrollListener, 1000);
+      }
+    };
 
     if (typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width >= TailwindConstants.ThemeScreens.lg) {
-      document.addEventListener('scroll', handleScroll, true);
-
-      Logger.info("addEventListener scroll");
-
+      addScrollListener();
     } else {
-      document.removeEventListener('scroll', handleScroll);
-
-      Logger.info("removeEventListener scroll");
+      setTimeout(addScrollListener, 1000);
     }
 
     return () => {
@@ -89,9 +99,8 @@ function Navigation() {
         clearTimeout(timerRef.current);
       }
 
-      Logger.info("removeEventListener scroll");
-
       document.removeEventListener('scroll', handleScroll);
+      Logger.info("removeEventListener scroll");
     };
   }, [screenSize]);
 
