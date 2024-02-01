@@ -19,6 +19,7 @@ jobs:
         echo "IMAGE_URL=${{vars.IMAGE_URL}}" >> .env
         echo "IMAGE_URL_HOSTNAME=${{vars.IMAGE_URL_HOSTNAME}}" >> .env
         echo "IMAGE_URL_PROTOCOL=${{vars.IMAGE_URL_PROTOCOL}}" >> .env
+        echo "ENVIRONMENT=${{vars.ENVIRONMENT}}" >> .env
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
