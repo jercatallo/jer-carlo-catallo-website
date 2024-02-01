@@ -25,11 +25,11 @@ function Navigation() {
 
   function handleScroll() {
     if (window.innerWidth >= TailwindConstants.ThemeScreens.lg) {
-      if (process.env.ENVIRONMENT === 'development') {
-        Logger.info("timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg", timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg);
-        Logger.info("timerRef.current !== undefined", timerRef.current !== undefined);
-        Logger.info("window.innerWidth", window.innerWidth);
-      }
+
+      Logger.info("timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg", timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg);
+      Logger.info("timerRef.current !== undefined", timerRef.current !== undefined);
+      Logger.info("window.innerWidth", window.innerWidth);
+
 
       if (timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg) {
         const navigation = document.getElementById('navigation');
@@ -53,13 +53,13 @@ function Navigation() {
 
         const navigation = document.getElementById('navigation');
 
-        if (process.env.ENVIRONMENT === 'development') {
-          Logger.info("hero", hero);
-          Logger.info("about", about);
-          Logger.info("navigation", navigation);
-          Logger.info("isElementInViewPort(hero):", isElementInViewPort(hero));
-          Logger.info("isElementInViewPort(about)", isElementInViewPort(about));
-        }
+
+        Logger.info("hero", hero);
+        Logger.info("about", about);
+        Logger.info("navigation", navigation);
+        Logger.info("isElementInViewPort(hero):", isElementInViewPort(hero));
+        Logger.info("isElementInViewPort(about)", isElementInViewPort(about));
+
 
         if (navigation) {
           navigation.style.opacity = '1';
@@ -70,30 +70,26 @@ function Navigation() {
   }
 
   useEffect(() => {
-    if (process.env.ENVIRONMENT === 'development') {
-      Logger.info("screenSize", screenSize);
-    }
+    Logger.info("screenSize", screenSize);
+
 
     if (typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width >= TailwindConstants.ThemeScreens.lg) {
       document.addEventListener('scroll', handleScroll, true);
-      if (process.env.ENVIRONMENT === 'development') {
-        Logger.info("addEventListener scroll");
-      }
+
+      Logger.info("addEventListener scroll");
+
     } else {
       document.removeEventListener('scroll', handleScroll);
-      if (process.env.ENVIRONMENT === 'development') {
-        Logger.info("removeEventListener scroll");
-      }
+
+      Logger.info("removeEventListener scroll");
     }
 
     return () => {
       if (timerRef.current !== undefined) {
         clearTimeout(timerRef.current);
       }
-  
-      if (process.env.ENVIRONMENT === 'development') {
-        Logger.info("removeEventListener scroll");
-      }
+
+      Logger.info("removeEventListener scroll");
 
       document.removeEventListener('scroll', handleScroll);
     };
@@ -112,9 +108,7 @@ function Navigation() {
       text = 'text-main';
     }
 
-    if (process.env.ENVIRONMENT === 'development') {
-      Logger.info("navigationTextColor text", text);
-    }
+    Logger.info("navigationTextColor text", text);
 
     return text;
   }, [scrollPosition, screenSize]);
@@ -133,9 +127,7 @@ function Navigation() {
       text = 'text-primary-color';
     }
 
-    if (process.env.ENVIRONMENT === 'development') {
-      Logger.info("brandTextColor text", text);
-    }
+    Logger.info("brandTextColor text", text);
 
     return text;
   }, [scrollPosition, screenSize]);
