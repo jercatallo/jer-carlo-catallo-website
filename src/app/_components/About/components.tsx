@@ -24,14 +24,14 @@ export const TechSkill = ({ children, framerMotionProps }: TechSkillProps) => {
 
 export const InfoBox = ({ data, value }: InfoBoxProps) => {
     return <Div overrides="info py-4 border-white border-2 text-center bg-background grid rounded items-center content-center">
-        <div className="info-value font-bold">{value}</div>
+        <div className="info-value font-bold text-sm">{value}</div>
 
-        <div className="info-data ">{data}</div>
+        <div className="info-data text-xs">{data}</div>
     </Div>;
 };
 
 export const InfoBoxContainer = ({ children, framerMotionProps }: InfoBoxContainerProps) => {
-    return <Div framerMotionProps={framerMotionProps} overrides="flex gap-2 mb-5 mt-5">
+    return <Div framerMotionProps={framerMotionProps} overrides="flex flex-wrap gap-2 mb-5 mt-5">
         {children}
     </Div>;
 };

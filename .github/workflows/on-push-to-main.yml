@@ -65,7 +65,7 @@ jobs:
           sudo docker pull ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
 
           # Run the Docker container
-          sudo docker run -d --name ${{secrets.HTTP_CONTAINER_NAME}} -p 3000:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
+          sudo docker run -d --name ${{secrets.HTTP_CONTAINER_NAME}} -p ${{secrets.AWS_CONTAINER_PORT}}:3000 ${{secrets.AWS_ECR_DOMAIN_NAME}}/${{secrets.AWS_REPOSITORY_ID}}/${{secrets.AWS_REPOSITORY_URI}}:${{secrets.AWS_IMAGE_TAG}}
         
     - name: Cleanup Unused Docker Resources
       run: |
