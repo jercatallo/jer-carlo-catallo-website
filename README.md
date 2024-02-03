@@ -1,36 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hi! I'm Jer Carlo Catallo <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px">
+My portfolio site is currently work in progress and I incrementally updating it in my sparetime.
 
-## Getting Started
+### Front-end
+### ![typescript-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/daf03870-004a-4074-9481-9385af3179c3) TypeScript &nbsp; ![nextdotjs-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/a685a08d-5b71-4dcb-bd45-d16514c98399) Next.js &nbsp; ![tailwindcss-color](https://github.com/jercatallo/dashboard-framework-demo-app/assets/49897728/4df9e04f-2c66-4bc9-89f8-5c466c3a9ea0) Tailwind CSS
 
-First, run the development server:
+### DevOps
+### ![docker-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/efeff3e5-9443-4686-8fc4-9ae694da3b19) Docker &nbsp; ![githubactions-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/2335e464-10ee-48bf-aa17-bc7b79039cd6) Github Actions &nbsp; ![snyk-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/0b8b1fcb-1ede-4989-957d-9055d237a3e0) Snyk
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Cloud Hosting
+### <img src="https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/b06644c4-ba8a-4b19-8832-63847e7668e9" width="25px" height="auto" /> Amazon Elastic Compute Cloud (EC2) <br/> <img src="https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/f9d9a120-76bf-4ad2-9afd-3d5470300e63" width="25px" height="auto" /> Amazon Simple Cloud Storage (S3) <br/> <img src="https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/b06644c4-ba8a-4b19-8832-63847e7668e9" width="25px" height="auto" /> AWS CloudFront <br/> <img src="https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/9db2df81-d08a-4d8f-8a92-9ad600ca91b5" width="25px" height="auto" /> AWS Elastic Container Registry(ECR) <br/> <img src="https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/5db11416-4d79-4962-ab89-928f73b07d46" width="25px" height="auto" /> AWS Route 53 <br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Server
+### ![nginx-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/51b96249-2948-4ede-a491-116232646614) Nginx &nbsp; ![ubuntu-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/67a57e15-f523-44d1-8885-8970ff154721) Ubuntu &nbsp; ![letsencrypt-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/c65dbdb2-0646-45e1-8355-08d55498d644) Let's Encrypt &nbsp;
