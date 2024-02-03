@@ -1,6 +1,8 @@
 # Hi! I'm Jer Carlo Catallo <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px">
 My portfolio site is currently work in progress and I incrementally updating it in my sparetime.
 
+Application URL: https://jercarlocatallo.com
+
 ### Front-end
 ### ![typescript-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/daf03870-004a-4074-9481-9385af3179c3) TypeScript &nbsp; ![nextdotjs-color](https://github.com/jercatallo/jer-carlo-catallo-website/assets/49897728/a685a08d-5b71-4dcb-bd45-d16514c98399) Next.js &nbsp; ![tailwindcss-color](https://github.com/jercatallo/dashboard-framework-demo-app/assets/49897728/4df9e04f-2c66-4bc9-89f8-5c466c3a9ea0) Tailwind CSS
 
