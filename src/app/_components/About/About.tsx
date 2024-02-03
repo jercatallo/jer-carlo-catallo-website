@@ -20,9 +20,9 @@ export const About = () => {
                         <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5 } }} overrides='text-3xl mt-0 text-light mb-3'>
                             Hi there, I&apos;m Jer!
                         </Heading>
-                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0.4 } }} overrides='text-sm max-w-3xl text-light mb-5'>  I&apos;m a passionate and philomath Software Engineer from the Philippines, currently working at meldCX as a Full-stack developer. I specialize in utilizing JavaScript ecosystem on building full-stack web applications, and also employing Cloud Computing Services and DevOps Practices to ensure efficient and scalable solutions.
+                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0.4 } }} overrides='leading-relaxed text-md max-w-3xl text-light mb-5'>  I&apos;m a passionate and philomath Software Engineer from the Philippines, currently working at meldCX as a Full-stack developer. I specialize in utilizing JavaScript ecosystem on building full-stack web applications, and also employing Cloud Computing Services and DevOps Practices to ensure efficient and scalable solutions.
                         </Paragraph>
-                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0.6 } }} overrides='text-sm max-w-3xl text-light mb-5'>  Beyond coding, I enjoy stargazing with my newtonian telescope, practicing boxing and taekwondo, exploring new music, savoring delicious food, and, of course, learning, learning, and learning again.
+                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0.6 } }} overrides='leading-relaxed text-md max-w-3xl text-light mb-5'>  Beyond coding, I enjoy stargazing with my newtonian telescope, practicing boxing and taekwondo, exploring new music, savoring delicious food, and, of course, learning, learning, and learning again.
                         </Paragraph>
 
 
@@ -44,7 +44,7 @@ export const About = () => {
 
                     </div>
                     <Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0 } }}>
-                        <img className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 lg:py-0 w-56 md:w-64 lg:w-72 h-auto' src={`${process.env.IMAGE_URL}/full-body.jpg`} alt='My Image'></img>
+                        <img className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 lg:py-0 w-64 md:w-72 lg:w-96 h-auto' src={`${process.env.IMAGE_URL}/full-body.jpg`} alt='My Image'></img>
                     </Div>
                 </div>
 
