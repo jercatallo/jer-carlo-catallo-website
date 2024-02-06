@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 // import { FramerMotionConstants } from '@/constants';
 
 type ButtonProps = {
-  children: ReactNode;  
+  children: ReactNode;
   type: 'primary' | 'secondary-2';
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   buttonType?: 'button' | 'submit' | 'reset';
@@ -20,7 +20,7 @@ export const Button = ({
   onClick,
   buttonType = 'button',
   overrides = '',
-  framerMotionProps
+  framerMotionProps,
 }: ButtonProps) => {
   const { ref, inView, entry } = useInView();
   const buttonStyles: Record<string, string> = {
@@ -31,26 +31,26 @@ export const Button = ({
   const commonStyles = 'inline w-fit rounded text-on-primary';
 
   const styleClasses = `${commonStyles} ${buttonStyles[type]} ${overrides}`;
-  
-  
+
+
   if (framerMotionProps) {
     return (
       <motion.button
-      initial="initial"
-      whileInView="animate"
-        animate={inView ? "animate" : "initial"}
+      initial='initial'
+      whileInView='animate'
+        animate={inView ? 'animate' : 'initial'}
         viewport={{ once: true }}
         transition={framerMotionProps.transition}
         // {...framerMotionProps.variants}
         variants={framerMotionProps.variants}
         type={buttonType}
         className={styleClasses}
-        onClick={onClick} 
+        onClick={onClick}
       >
         {children}
       </motion.button>
     );
-  } else {
+  }
     return (
       <button
         type={buttonType}
@@ -60,6 +60,6 @@ export const Button = ({
         {children}
       </button>
     );
-  }
+
 
 };

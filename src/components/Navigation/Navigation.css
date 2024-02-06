@@ -1,9 +1,0 @@
-#navigation {
-    background: white;
-}   
-
-@media screen and (min-width: 1024px) {
-    #navigation {
-        background: none;
-    }   
-}

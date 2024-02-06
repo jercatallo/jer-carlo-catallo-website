@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { ReactNode } from 'react';
 import {motion} from 'framer-motion';
 import { FramerMotionTypes } from '@/types';
@@ -23,15 +23,15 @@ export function Span({ children, overrides = '', framerMotionProps }: SpanProps)
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            animate={inView ? "animate" : "initial"}
+            animate={inView ? 'animate' : 'initial'}
             transition={framerMotionProps.transition}
             // {...framerMotionProps.variants}
             variants={framerMotionProps.variants} 
             className={styleClasses}>{children}</motion.span>
         );
-    }else{
+    }
         return (
             <span className={styleClasses}>{children}</span>
         );
-    }
+    
 }

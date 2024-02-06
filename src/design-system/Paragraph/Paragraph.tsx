@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { ReactNode } from 'react';
 import {motion} from 'framer-motion';
 import { FramerMotionTypes } from '@/types';
@@ -24,14 +24,14 @@ export function Paragraph({ children, overrides = '', framerMotionProps }: Parag
             whileInView="animate"
             viewport={{ once: true }}
             transition={framerMotionProps.transition}
-            animate={inView ? "animate" : "initial"}
+            animate={inView ? 'animate' : 'initial'}
             // {...framerMotionProps.variants}
             variants={framerMotionProps.variants} 
             className={styleClasses}>{children}</motion.p>
         );
-    }else{
+    }
         return (
             <p className={styleClasses}>{children}</p>
         );
-    }
+    
 }

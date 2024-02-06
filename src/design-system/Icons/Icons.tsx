@@ -1,5 +1,7 @@
-import { FaGithub, FaLinkedin, FaArrowDown, FaReact, FaHtml5, FaCss3, FaAws  } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaGithub, FaLinkedin, FaArrowDown, FaReact, FaHtml5, FaCss3, FaAws } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 type IconType = {
     styleClasses?: string,
@@ -35,4 +37,8 @@ export const CSSIcon = ({styleClasses}: IconType) => {
 
 export const AWSIcon = ({styleClasses}: IconType) => {
     return <FaAws className={styleClasses} />;
+};
+
+export const ExitIcon = ({styleClasses}: IconType) => {
+    return <FontAwesomeIcon icon={faXmark} className={styleClasses} />;
 };

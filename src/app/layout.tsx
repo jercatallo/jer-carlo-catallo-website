@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+
 import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -15,15 +15,15 @@ export const metadata: Metadata = {
     { rel: 'apple-touch-icon', sizes: '180x180', url: '/apple-touch-icon.png' },
   ],
   description: 'Jer Carlo Catallo official website',
-  keywords: ["Jer Carlo Catallo", "Software Engineer", "Full-stack Developer", "Web Applications Enthusiast", "Web Development", "JavaScript", "TypeScript", "React", "Node.js", "MySQL", "AWS", "Docker", "CI/CD", "DevOps"],
+  keywords: ['Jer Carlo Catallo', 'Software Engineer', 'Full-stack Developer', 'Web Applications Enthusiast', 'Web Development', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'MySQL', 'AWS', 'Docker', 'CI/CD', 'DevOps'],
   authors: [
-    { name: "Jer Carlo Catallo", url: "jercarlocatallo.com" }
+    { name: 'Jer Carlo Catallo', url: 'jercarlocatallo.com' },
   ],
   openGraph: {
     title: 'Jer Carlo Catallo - Software Engineer | Full-stack Developer | Web Applications Enthusiast',
     description: 'Explore the digital world of Jer Carlo Catallo - Crafting robust websites and apps with dedication and inventive solutions.',
-    url: 'jercarlocatallo.com'
-  }
+    url: 'jercarlocatallo.com',
+  },
 };
 
 export default function RootLayout({

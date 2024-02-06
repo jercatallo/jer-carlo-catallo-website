@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ReactNode } from 'react';
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from 'framer-motion';
 import { FramerMotionTypes } from '@/types';
 // import { FramerMotionConstants } from '@/constants';
 import { useInView } from 'react-intersection-observer';
@@ -29,7 +29,7 @@ export function Heading({ type = 'h1', children, overrides = '', framerMotionPro
         whileInView="animate"
         viewport={{ once: true }}
         transition={framerMotionProps.transition}
-        animate={inView ? "animate" : "initial"}
+        animate={inView ? 'animate' : 'initial'}
         // {...framerMotionProps.variants}
         variants={framerMotionProps.variants}
         className={styleClasses}
@@ -37,10 +37,10 @@ export function Heading({ type = 'h1', children, overrides = '', framerMotionPro
         {children}
       </MotionHeading>
 
- 
+
     );
-  } else {
+  }
     const HeadingElement = type;
     return <HeadingElement className={styleClasses}>{children}</HeadingElement>;
-  }
+
 }

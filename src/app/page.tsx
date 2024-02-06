@@ -1,15 +1,20 @@
 import React from 'react';
 import { About, Hero } from './_components';
-import dynamic from 'next/dynamic';
-const Navigation = dynamic(
-  () => import('../components/Navigation/Navigation'),
-  { ssr: false }
-);
+import { Navigation } from '@/components';
+import './globals.css';
+ import { Montserrat, Inter } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+});
 
 export default function Home() {
-
   return (
-    <div className='relative'>
+    <div className={`relative ${montserrat.className} ${inter.className}`}>
       <header className='relative'>
         <Navigation></Navigation>
       </header>
