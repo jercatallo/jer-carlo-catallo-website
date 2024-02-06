@@ -1,8 +1,13 @@
 import React from 'react';
 import { About, Hero } from './_components';
-import { Navigation } from '@/components';
+import { Montserrat, Inter } from 'next/font/google';
+import dynamic from 'next/dynamic';
+const Navigation = dynamic(
+  () => import('../components/Navigation/Navigation'),
+  { ssr: false }
+);
 import './globals.css';
- import { Montserrat, Inter } from 'next/font/google';
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],

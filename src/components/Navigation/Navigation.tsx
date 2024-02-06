@@ -219,3 +219,5 @@ export const Navigation = () => {
   </NavigationProvider>
   );
 };
+
+export default Navigation;
