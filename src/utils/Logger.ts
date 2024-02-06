@@ -1,4 +1,3 @@
-
 enum LogLevel {
     DEBUG = 'DEBUG',
     INFO = 'INFO',
@@ -10,7 +9,7 @@ function log(level: LogLevel, message: string, data?: any): void {
     if (process.env.ENVIRONMENT === 'development') {
         const timestamp = new Date().toISOString();
         const logMessage = `[${timestamp}] [${level}] ${message}`;
-    
+
         if (data) {
             console.log(logMessage, data);
         } else {

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { ReactNode } from 'react';
 import {motion} from 'framer-motion';
 import { FramerMotionTypes } from '@/types';
@@ -18,21 +18,21 @@ export function Div({ children, overrides = '', framerMotionProps }: DivProps) {
     const styleClasses = `${commonStyles} ${overrides}`;
 
     if (framerMotionProps) {
-        return (    
-            <motion.div 
+        return (
+            <motion.div
             ref={ref}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            animate={inView ? "animate" : "initial"}
+            animate={inView ? 'animate' : 'initial'}
             transition={framerMotionProps.transition}
             // {...framerMotionProps.variants}
-            variants={framerMotionProps.variants} 
+            variants={framerMotionProps.variants}
             className={styleClasses}>{children}</motion.div>
         );
-    }else{
+    }
         return (
             <div className={styleClasses}>{children}</div>
         );
-    }
+
 }

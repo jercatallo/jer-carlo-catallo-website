@@ -12,7 +12,7 @@ export const About = () => {
     return (
         <section id="about" style={{
             background: `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`
+        url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`,
         }} className="snap-align-none lg:snap-center relative bg-center bg-no-repeat h-fit lg:h-screen grid items-center px-4">
             <div className='about overflow-hidden max-w-6xl justify-center mx-auto p-1 relative grid items-center mt-auto' >
                 <div className='mt-12 grid pt-4 py-8 pb-0 lg:grid-cols-2 items-center'>
@@ -33,18 +33,14 @@ export const About = () => {
                         </div>
 
                         <InfoBoxContainer framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 1.5 } }}>
-                            <InfoBox data='Work Experience' value='3.5 Years' />
+                            <InfoBox data='Work Experience' value='3.8 Years' />
                             <InfoBox data='Degree' value='BSc CompSci' />
                             <InfoBox data='Field' value='Web Dev.' />
-                            {/* <Button type='primary' overrides='px-2 text-xs'>
-                                Learn more!
-                            </Button> */}
-
                         </InfoBoxContainer>
 
                     </div>
                     <Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 0.5, delay: 0 } }}>
-                        <img className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 lg:py-0 w-64 md:w-72 lg:w-96 h-auto' src={`${process.env.IMAGE_URL}/full-body.jpg`} alt='My Image'></img>
+                        <img className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 lg:py-0 w-4/5 md:w-72 lg:w-96 h-auto' src={`${process.env.IMAGE_URL}/full-body.jpg`} alt='My Image'></img>
                     </Div>
                 </div>
 

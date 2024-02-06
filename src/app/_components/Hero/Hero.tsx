@@ -7,7 +7,7 @@ import { fadeInUp } from '@/constants/FramerMotion/FramerMotion';
 export const Hero = () => {
 
     return (
-        <section id="hero" className="pt-16 lg:pt-0 snap-align-none lg:snap-center bg-cover parallax-container overflow-hidden relative bg-center bg-no-repeat h-full lg:h-screen flex items-center content-center">
+        <section style={{minHeight: '850px'}} id="hero" className="pt-16 lg:pt-0 snap-align-none lg:snap-center bg-cover h-full parallax-container overflow-hidden relative bg-center bg-no-repeat lg:h-screen flex items-center content-center">
             <div className='hero h-full w-full relative grid items-center'>
                 <div className='mt-auto max-w-6xl grid justify-center mx-auto p-4' >
                     <div className=' animate-fade-in'>
@@ -24,7 +24,7 @@ export const Hero = () => {
                             <a href='https://github.com/jercatallo' target='_blank' className='animate-button-animations-1'>
                                 <Button framerMotionProps={{
                                     variants: fadeInUp,
-                                    transition: { duration: 1, delay: 0.5 }
+                                    transition: { duration: 1, delay: 0.5 },
                                 }} type='primary' overrides='px-2  ' >
                                     <GithubIcon styleClasses='text-2xl'></GithubIcon>
                                 </Button>
@@ -32,7 +32,7 @@ export const Hero = () => {
                             <a href='https://www.linkedin.com/in/jercarlocatallo/' target='_blank' className='animate-button-animations-2'>
                                 <Button framerMotionProps={{
                                     variants: fadeInUp,
-                                    transition: { duration: 1, delay: 0.6 }
+                                    transition: { duration: 1, delay: 0.6 },
                                 }} type='primary' overrides='px-2  ' >
                                     <LinkedInIcon styleClasses='text-2xl'></LinkedInIcon>
                                 </Button>
@@ -40,7 +40,7 @@ export const Hero = () => {
                             <a href='mailto:jer.catallo@gmail.com' target='_blank' className='animate-button-animations-3'>
                                 <Button framerMotionProps={{
                                     variants: fadeInUp,
-                                    transition: { duration: 1, delay: 0.7 }
+                                    transition: { duration: 1, delay: 0.7 },
                                 }} type='primary' overrides='px-2'>
                                     <EmailIcon styleClasses='text-2xl'></EmailIcon>
                                 </Button>
@@ -48,20 +48,20 @@ export const Hero = () => {
                             <Span framerMotionProps={{
                                 variants: {
                                     animate: {
-                                        x: 0, opacity: 1
+                                        x: 0, opacity: 1,
                                     },
                                     initial: {
                                         x: 100, opacity: 0,
                                     },
                                     exit: { opacity: 0, y: -20 },
                                 },
-                                transition: { duration: 1, delay: 1 }
+                                transition: { duration: 1, delay: 1 },
                             }} overrides='text-lg py-1 lg:text-sm bordered border-main-light border-solid border-2 rounded px-2 flex items-center text-main-light border-main-light'> <Image className='' src={`${process.env.IMAGE_URL}/philippines-icon.jpg`} width={20} height={20} alt='Philippines Icon' /> +63 961 800 4628</Span>
                             
                         </div>
                     </div>
                 </div>
-            <ArrowDownIcon  styleClasses='animate-bounce bouncing-div mx-auto mt-auto text-primary-color pb-1'></ArrowDownIcon>
+            <ArrowDownIcon styleClasses='animate-bounce bouncing-div mx-auto mt-auto text-primary-color pb-1'></ArrowDownIcon>
 
             </div>
         </section>

@@ -33,5 +33,5 @@ export const Skills = [
     'REST Architecture',
     'MVC Architecture',
     'Monolithic Architecture',
-    'Agile/Scrum'
+    'Agile/Scrum',
 ];

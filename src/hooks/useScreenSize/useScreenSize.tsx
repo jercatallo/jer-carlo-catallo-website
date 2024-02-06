@@ -1,13 +1,20 @@
+'use client';
 import { useState, useEffect } from 'react';
 
 export interface ScreenSize {
   width: number;
   height: number;
+  screenWidth: number;
+  screenHeight: number;
+  devicePixelRatio: number;
 }
 
 const getWindowSize = (): ScreenSize => ({
   width: window?.innerWidth || 0,
-  height: window?.innerHeight || 0,
+  height:  window?.innerHeight || 0,
+  screenWidth: window?.screen?.width || 0,
+  screenHeight:  window?.screen?.height || 0,
+  devicePixelRatio : window?.devicePixelRatio || 0,
 });
 
 export const useScreenSize = (): ScreenSize => {
