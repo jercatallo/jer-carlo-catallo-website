@@ -7,7 +7,7 @@ import { fadeInUp } from '@/constants/FramerMotion/FramerMotion';
 export const Hero = () => {
 
     return (
-        <section style={{minHeight: '850px'}} id="hero" className="pt-16 lg:pt-0 snap-align-none lg:snap-center bg-cover h-full parallax-container overflow-hidden relative bg-center bg-no-repeat lg:h-screen flex items-center content-center">
+        <section id="hero" className="pt-16 lg:pt-0 snap-align-none lg:snap-center bg-cover h-full parallax-container overflow-hidden relative bg-center bg-no-repeat lg:h-screen flex items-center content-center">
             <div className='hero h-full w-full relative grid items-center'>
                 <div className='mt-auto max-w-6xl grid justify-center mx-auto p-4' >
                     <div className=' animate-fade-in'>

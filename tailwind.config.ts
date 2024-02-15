@@ -9,11 +9,11 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      'sm': '640px',      // Small screens (e.g., mobile phones)
-      'md': '768px',      // Medium screens (e.g., tablets)
-      'lg': '1024px',     // Large screens (e.g., small desktops)
-      'xl': '1280px',     // Extra large screens (e.g., large desktops)
-      '2xl': '1536px',    // Extra extra large screens
+      'sm': 'cpx', // Small screens (e.g., mobile phones)
+      'md': '768px', // Medium screens (e.g., tablets)
+      'lg': '1024px', // Large screens (e.g., small desktops)
+      'xl': '1280px', // Extra large screens (e.g., large desktops)
+      '2xl': '1536px', // Extra extra large screens
     },
     colors: {
       // Primary Colors

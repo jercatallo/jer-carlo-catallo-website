@@ -121,7 +121,7 @@ const NavigationComponent = () => {
     } else {
       text = 'text-main';
     }
-    const isRatioNotSupported = screenSize.devicePixelRatio > maxRatio || screenSize.devicePixelRatio < minRatio;
+    const isRatioNotSupported = screenSize.devicePixelRatio >= maxRatio || screenSize.devicePixelRatio < minRatio;
 
     if (isRatioNotSupported) {
       text = 'text-main';
@@ -144,7 +144,7 @@ const NavigationComponent = () => {
       text = 'text-primary-color';
     }
 
-    const isRatioNotSupported = screenSize.devicePixelRatio > maxRatio || screenSize.devicePixelRatio < minRatio;
+    const isRatioNotSupported = screenSize.devicePixelRatio >= maxRatio || screenSize.devicePixelRatio < minRatio;
 
     if (isRatioNotSupported) {
       text = 'text-primary-color';
@@ -156,7 +156,7 @@ const NavigationComponent = () => {
   const navigationBackground = useMemo(() => {
     let text = 'none';
 
-    const isRatioNotSupported = screenSize.devicePixelRatio > maxRatio || screenSize.devicePixelRatio < minRatio;
+    const isRatioNotSupported = screenSize.devicePixelRatio >= maxRatio || screenSize.devicePixelRatio < minRatio;
     const isBGWhite = screenSize.width <= TailwindConstants.ThemeScreens.lg || isRatioNotSupported;
     if (isBGWhite) {
       text = 'white';
