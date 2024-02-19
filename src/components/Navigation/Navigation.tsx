@@ -7,10 +7,10 @@ import { TailwindConstants } from '@/constants/Tailwind';
 import { Logger } from '@/utils';
 import { HamburgerMenu } from './components/HamburgerMenu';
 import { NavigationProvider, useNavigation } from './NavigationContext';
+import { Div } from '@/design-system/Div';
 
 const NavigationComponent = () => {
-  const {showHamburgerMenu, setShowHamburgerMenu} = useNavigation();
-  const [scrollPosition, setScrollPosition] = useState('hero');
+  const { showHamburgerMenu, setShowHamburgerMenu, scrollPosition, setScrollPosition } = useNavigation();
 
   const timerRef = useRef<NodeJS.Timeout | undefined>(undefined);
   const screenSize = useScreenSize();
@@ -35,7 +35,7 @@ const NavigationComponent = () => {
       Logger.info('timerRef.current !== undefined', timerRef.current !== undefined);
       Logger.info('window.innerWidth', window.innerWidth);
 
-
+      // if(localStorage.getItem('scrollPosition') !== 'experience'){
       if (timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg) {
         const navigation = document.getElementById('navigation');
         if (navigation) {
@@ -44,36 +44,54 @@ const NavigationComponent = () => {
 
         clearTimeout(timerRef.current);
       }
+      // }
 
-
+      clearTimeout(timerRef.current);
       timerRef.current = setTimeout(() => {
         const hero = document.querySelector('.hero');
         const about = document.querySelector('.about');
+        const experience = document.querySelector('.experience');
 
         if (isElementInViewPort(hero)) {
           setScrollPosition('hero');
+          localStorage.setItem('scrollPosition', 'hero');
         } else if (isElementInViewPort(about)) {
           setScrollPosition('about');
+          localStorage.setItem('scrollPosition', 'hero');
+        } else if (isElementInViewPort(experience)) {
+          setScrollPosition('experience');
+          localStorage.setItem('scrollPosition', 'experience');
         }
 
         const navigation = document.getElementById('navigation');
 
-
         Logger.info('hero', hero);
         Logger.info('about', about);
+        Logger.info('experience', experience);
         Logger.info('navigation', navigation);
         Logger.info('isElementInViewPort(hero):', isElementInViewPort(hero));
         Logger.info('isElementInViewPort(about)', isElementInViewPort(about));
-
+        Logger.info('isElementInViewPort(experience)', isElementInViewPort(experience));
 
         if (navigation) {
           navigation.style.opacity = '1';
         }
       }, 300);
     }
-
   }
-``;
+  ``;
+
+
+  useEffect(() => {
+    if (scrollPosition !== 'experience' && typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width >= TailwindConstants.ThemeScreens.lg) {
+      const experienceContainer = document.getElementById('experience-container');
+      if (experienceContainer) {
+        experienceContainer.scrollTop = 0;
+      }
+    }
+
+  }, [scrollPosition]);
+
   useEffect(() => {
     Logger.info('screenSize', screenSize);
     Logger.info('window', window);
@@ -107,15 +125,15 @@ const NavigationComponent = () => {
       document.removeEventListener('scroll', handleScroll);
       Logger.info('removeEventListener scroll');
     };
-  }, [screenSize]);
+  }, [screenSize, scrollPosition]);
 
   const navigationTextColor = useMemo(() => {
     let text = '';
     if (screenSize.width >= TailwindConstants.ThemeScreens.lg) {
-      if (scrollPosition === 'about') {
+      if (['about'].includes(scrollPosition)) {
         text = 'text-light';
       }
-      if (scrollPosition === 'hero') {
+      if (['experience', 'hero'].includes(scrollPosition)) {
         text = 'text-main';
       }
     } else {
@@ -134,10 +152,11 @@ const NavigationComponent = () => {
   const brandTextColor = useMemo(() => {
     let text = '';
     if (screenSize.width >= TailwindConstants.ThemeScreens.lg) {
-      if (scrollPosition === 'about') {
+      if (['about'].includes(scrollPosition)) {
         text = 'text-light';
       }
-      if (scrollPosition === 'hero') {
+
+      if (['experience', 'hero'].includes(scrollPosition)) {
         text = 'text-primary-color';
       }
     } else {
@@ -161,16 +180,19 @@ const NavigationComponent = () => {
     if (isBGWhite) {
       text = 'white';
     }
-  
 
     return text;
-  }, [screenSize]);
+  }, [screenSize, scrollPosition]);
 
+  const onSectionClick = ({ elementClassName }: { elementClassName: string }) => {
+    const element = document.getElementById(elementClassName);
+    element?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+  };
 
   return (
     <>
       <nav id='navigation' style={{ background: navigationBackground }} className={`bg-${navigationBackground} duration-500 z-10 mb-12 border-gray-200 fixed left-0 right-0 top-0`}>
-        <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+        <Div overrides='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <a href='#' className='flex items-center space-x-3 rtl:space-x-reverse'>
             <span className={`font-heading ${navigationTextColor} self-center text-5xl whitespace-nowrap font-bold`}> jc  </span> <span className={`mx-5 font-heading  ${brandTextColor} self-center text-5xl whitespace-nowrap font-bold`}>;</span>
           </a>
@@ -182,19 +204,16 @@ const NavigationComponent = () => {
               <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M1 1h15M1 7h15M1 13h15' />
             </svg>
           </button>
-          <div className='hidden w-full lg:block lg:w-auto' id='navbar-default'>
+          <Div overrides='hidden w-full lg:block lg:w-auto'>
             <ul className='font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white'>
-              <li onClick={() => {
-                const element = document.getElementById('hero');
-                element?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
-              }}>
+              <li onClick={() => onSectionClick({ elementClassName: 'hero' })}>
                 <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0`} aria-current='page'>Home</a>
               </li>
-              <li onClick={() => {
-                const element = document.getElementById('about');
-                element?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
-              }}>
+              <li onClick={() => onSectionClick({ elementClassName: 'about' })}>
                 <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>About</a>
+              </li>
+              <li onClick={() => onSectionClick({ elementClassName: 'experience' })}>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Experience</a>
               </li>
               <li>
                 <a target='_blank' href='https://drive.google.com/file/d/1evTroPQysDvLXgTliyGe-n3UbZR6IVzs/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Resume</a>
@@ -202,11 +221,12 @@ const NavigationComponent = () => {
               <li>
                 <a target='_blank' href='https://drive.google.com/file/d/1MiGGrTrHBLtBRhhuE1otrm23EaS5JUYM/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>CV</a>
               </li>
+
             </ul>
-          </div>
-        </div>
+          </Div>
+        </Div>
       </nav>
-     <HamburgerMenu></HamburgerMenu>
+      <HamburgerMenu></HamburgerMenu>
     </>
 
   );
@@ -214,9 +234,9 @@ const NavigationComponent = () => {
 
 export const Navigation = () => {
   return (
-  <NavigationProvider>
-    <NavigationComponent></NavigationComponent>
-  </NavigationProvider>
+    <NavigationProvider>
+      <NavigationComponent></NavigationComponent>
+    </NavigationProvider>
   );
 };
 

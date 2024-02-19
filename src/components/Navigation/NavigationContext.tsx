@@ -4,6 +4,8 @@ import React, { ReactNode, createContext, useContext, useState } from 'react';
 interface NavigationContextProps {
     showHamburgerMenu: boolean;
     setShowHamburgerMenu: React.Dispatch<React.SetStateAction<boolean>>;
+    scrollPosition: string;
+    setScrollPosition: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const NavigationContext = createContext<NavigationContextProps | undefined>(undefined);
@@ -18,9 +20,13 @@ export const useNavigation = () => {
 
 export const NavigationProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState('hero');
+
     const values = {
         showHamburgerMenu,
         setShowHamburgerMenu,
+        scrollPosition, 
+        setScrollPosition,
     };
     return (
         <NavigationContext.Provider value={values}>

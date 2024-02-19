@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
 import Head from 'next/head';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jercarlocatallo.com'),
@@ -37,7 +37,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:image" content="/android-chrome-512x512.png"></meta>
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${montserrat.className}`}>{children}</body>
     </html>
   );
 }

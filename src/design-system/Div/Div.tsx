@@ -9,9 +9,10 @@ type DivProps = {
     children: ReactNode;
     overrides?: string;
     framerMotionProps?: FramerMotionTypes.PropsType;
+    id?: string;
 };
 
-export function Div({ children, overrides = '', framerMotionProps }: DivProps) {
+export function Div({ children, overrides = '', framerMotionProps, id }: DivProps) {
     const commonStyles = 'font-body';
     const { ref, inView, entry } = useInView();
 
@@ -21,6 +22,7 @@ export function Div({ children, overrides = '', framerMotionProps }: DivProps) {
         return (
             <motion.div
             ref={ref}
+            id={id}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -32,7 +34,7 @@ export function Div({ children, overrides = '', framerMotionProps }: DivProps) {
         );
     }
         return (
-            <div className={styleClasses}>{children}</div>
+            <div id={id} className={styleClasses}>{children}</div>
         );
 
 }

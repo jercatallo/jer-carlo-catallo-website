@@ -24,9 +24,9 @@ export const TechSkill = ({ children, framerMotionProps }: TechSkillProps) => {
 
 export const InfoBox = ({ data, value }: InfoBoxProps) => {
     return <Div overrides="info py-4 border-white border-2 text-center bg-background grid rounded items-center content-center">
-        <Div overrides="info-value font-bold text-sm">{value}</Div>
+        <div className="info-value font-bold text-sm">{value}</div>
 
-        <Div overrides="info-data text-xs">{data}</Div>
+        <div className="info-data text-xs">{data}</div>
     </Div>;
 };
 

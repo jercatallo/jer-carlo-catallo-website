@@ -1,0 +1,10 @@
+#experience {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.95)), /* White overlay */
+    url('https://d29z7ac04eim28.cloudfront.net/city-img.jpeg') center/cover no-repeat fixed;
+}
+
+@media screen and (max-width: 640px) {
+    #experience {
+       min-height: 850px;
+    }
+}

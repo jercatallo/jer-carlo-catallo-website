@@ -35,8 +35,8 @@ const config: Config = {
       ['on-primary']: '#ffffff',
     },
     fontFamily: {
-      ['heading']: ['Montserrat', 'sans-serif'],
-      ['body']: ['Inter', 'sans-serif'],
+      // ['heading']: ['Montserrat', 'sans-serif'],
+      // ['body']: ['Inter', 'sans-serif'],
     },
   },
   plugins: [],
