@@ -36,6 +36,8 @@ export const Experience = () => {
 
                         return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 1 + index * 0.10} }} key={`${experience}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-accent'>
                             <Heading overrides='text-primary-color text-xl my-0'>{experience.company}</Heading>
+                            <Paragraph overrides='text-sm mb-4'>{experience.description}</Paragraph>
+
                             {experience.positions?.map((position, index) => {
 
                                 return (<Div key={`${position}-${index}`}>

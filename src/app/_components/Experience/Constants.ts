@@ -37,12 +37,12 @@ export const Education = [
 export const WorkExperience = [
 
     {
-        company: 'meldCX',
+        company: 'meldCX Philippines',
+        description: 'meldCX Philippines, formerly known as Skunk Works, has undergone an upgrade and rebranding, maintaining its commitment to delivering exceptional services around the globe. Equipped with cutting-edge AI and intelligent edge technologies, meldCX continues to empower businesses in providing outstanding customer experiences.',    
         positions: [
             {
                 title: 'Full Stack Developer',
-                location: 'Full-time, Remote',
-                // workSetup: 'Work setup: Remote',
+                location: 'Victoria, Australia | Full-time | Remote',
                 year: 'June 2023 to Currrent (9 Months)',
                 points: [
                     "Spearheading the development, and organizing project releases of the projects.",
@@ -58,12 +58,12 @@ export const WorkExperience = [
     },
     {
         company: 'Skunk Works',
+        description: 'meldCX, an Australian-based company, established its headquarters, Skunk Works, in the Philippines. Specializing in leveraging AI and intelligent edge technologies, meldCX empowers businesses to deliver unparalleled client experiences.',
         positions: [
             {
                 title: 'Full Stack Developer',
-                company: 'meldCX',
-                location: 'Full-time, Remote',
-                year: 'June 2023 to Currrent (9 Months)',
+                location: 'Cagayan de Oro, Philippines | Full-time | Remote',
+                year: 'June 2023 to Currrent (1 year and 2 months)',
                 points: [
                     "Spearheaded the development, and organizing project releases of the projects.",
                     "Performed API integrations from both internal and third-party APIs.",
@@ -75,8 +75,7 @@ export const WorkExperience = [
             },
             {
                 title: 'Front-end Developer',
-                company: 'Skunk Works',
-                location: 'Full-time, Remote',
+                location: 'Cagayan de Oro, Philippines | Full-time | Remote',
                 year: 'November 2021 to May 2022 (6 months)',
                 points: [
                     "Involved in test-driven front-end and back-end projects.",
@@ -89,11 +88,11 @@ export const WorkExperience = [
     },
     {
         company: 'RP Innotech',
+        description: 'A pioneering Software Development company headquartered in Pampanga, Philippines, dedicated to delivering top-tier business solutions crafted with the latest and most sought-after technologies in the industry.',
         positions: [
             {
                 title: 'Software Engineer',
-                location: 'Full-time, Remote',
-                // workSetup: 'Work setup: Remote',
+                location: 'Pampanga, Philippines | Full-time | Remote',
                 year: 'July 2020 to November 2021 (1 year and 5 months)',
                 points: [
                     "Worked on 5 company projects, primarily serving as technical lead.",
