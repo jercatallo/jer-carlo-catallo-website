@@ -29,6 +29,7 @@ export const Skills = [
     'Github Pages',
     'Render',
     'Ubuntu',
+    'Windows',
     'Nginx',
     'Agile/Scrum',
 ];

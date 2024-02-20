@@ -45,7 +45,7 @@ export const Footer = () => {
             <Heading overrides='text-center text-primary-color text-sm'>Please feel free to get in touch!</Heading>
 
 
-            <Heading overrides='text-center font-light pt-3 text-sm'>© 2024 All Right Reserved | Jer Carlo Catallo</Heading>
+            <Heading overrides='text-center font-light pt-3 text-sm'>© 2024 All Rights Reserved | Jer Carlo Catallo</Heading>
 
         </footer>
     );

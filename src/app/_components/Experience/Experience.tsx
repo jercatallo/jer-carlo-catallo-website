@@ -15,7 +15,7 @@ export const Experience = () => {
                     <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 , delay: 0.5} }} overrides='text-5xl mb-6 mt-6' >Education</Heading>
                     {Education && Education.map((education, index) => {
 
-                        return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.5 + index * 0.10 } }} key={`${education}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-primary-color'>
+                        return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: index * 0.10 } }} key={`${education}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-primary-color'>
                             <Heading overrides='text-primary-color text-xl my-0'>{education.program}</Heading>
                             <Heading overrides='text-xl my-0 '>{education.school}</Heading>
                             <Paragraph overrides='text-sm font-bold'>{education.level}</Paragraph>
@@ -34,7 +34,7 @@ export const Experience = () => {
                     <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 1} }} overrides='text-5xl mb-6 mt-6'>Experience</Heading>
                     {WorkExperience && WorkExperience.map((experience, index) => {
 
-                        return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 1 + index * 0.10} }} key={`${experience}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-accent'>
+                        return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: index * 0.10} }} key={`${experience}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-accent'>
                             <Heading overrides='text-primary-color text-xl my-0'>{experience.company}</Heading>
                             <Paragraph overrides='text-sm mb-4'>{experience.description}</Paragraph>
 

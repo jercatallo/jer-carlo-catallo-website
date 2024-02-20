@@ -47,6 +47,7 @@ export const WorkExperience = [
                 points: [
                     "Spearheading the development, and organizing project releases of the projects.",
                     "Performing API integrations from both internal and third-party APIs.",
+                    "Carrying out Internet of Things (IoT) devices software integrations.",
                     "Creating UI Wireframes for the company projects by analyzing business requirements.",
                     "Developing front-end and back-end applications from the ground up to production-ready.",
                     "Maintaining and improving essential company front-end and back-end projects by conducting research, documentation, and development.",
@@ -67,6 +68,7 @@ export const WorkExperience = [
                 points: [
                     "Spearheaded the development, and organizing project releases of the projects.",
                     "Performed API integrations from both internal and third-party APIs.",
+                    "Carrying out Internet of Things (IoT) devices software integrations.",
                     "Created UI Wireframes for the company projects by analyzing business requirements.",
                     "Developed front-end and back-end applications from the ground up to production-ready.",
                     "Maintained and improving essential company front-end and back-end projects by conducting research, documentation, and development.",
