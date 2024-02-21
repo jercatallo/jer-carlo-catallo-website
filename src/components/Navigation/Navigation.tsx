@@ -35,16 +35,17 @@ const NavigationComponent = () => {
       Logger.info('timerRef.current !== undefined', timerRef.current !== undefined);
       Logger.info('window.innerWidth', window.innerWidth);
 
-      // if(localStorage.getItem('scrollPosition') !== 'experience'){
-      if (timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg) {
-        const navigation = document.getElementById('navigation');
-        if (navigation) {
-          navigation.style.opacity = '0';
-        }
+      const experienceContainer = document.getElementById('experience-container');
+      if (experienceContainer && (Math.ceil(experienceContainer.scrollHeight - experienceContainer.scrollTop) === experienceContainer.clientHeight) || experienceContainer?.scrollTop === 0 ) {
+        if (timerRef.current !== undefined && window.innerWidth >= TailwindConstants.ThemeScreens.lg) {
+          const navigation = document.getElementById('navigation');
+          if (navigation) {
+            navigation.style.opacity = '0';
+          }
 
-        clearTimeout(timerRef.current);
+          clearTimeout(timerRef.current);
+        }
       }
-      // }
 
       clearTimeout(timerRef.current);
       timerRef.current = setTimeout(() => {
