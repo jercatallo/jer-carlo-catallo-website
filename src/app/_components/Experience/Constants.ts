@@ -46,8 +46,7 @@ export const WorkExperience = [
                 year: 'June 2023 to Currrent (9 Months)',
                 points: [
                     "Spearheading the development, and organizing project releases of the projects.",
-                    "Performing API integrations from both internal and third-party APIs.",
-                    "Carrying out Internet of Things (IoT) devices software integrations.",
+                    "Performing API integrations from both internal and third-party APIs and carrying out Internet of Things (IoT) devices software integrations.",
                     "Creating UI Wireframes for the company projects by analyzing business requirements.",
                     "Developing front-end and back-end applications from the ground up to production-ready.",
                     "Maintaining and improving essential company front-end and back-end projects by conducting research, documentation, and development.",
@@ -67,8 +66,7 @@ export const WorkExperience = [
                 year: 'June 2023 to Currrent (1 year and 2 months)',
                 points: [
                     "Spearheaded the development, and organizing project releases of the projects.",
-                    "Performed API integrations from both internal and third-party APIs.",
-                    "Carrying out Internet of Things (IoT) devices software integrations.",
+                    "Performed API integrations from both internal and third-party APIs and carried out Internet of Things (IoT) devices software integrations.",
                     "Created UI Wireframes for the company projects by analyzing business requirements.",
                     "Developed front-end and back-end applications from the ground up to production-ready.",
                     "Maintained and improving essential company front-end and back-end projects by conducting research, documentation, and development.",
@@ -97,7 +95,7 @@ export const WorkExperience = [
                 location: 'Pampanga, Philippines | Full-time | Remote',
                 year: 'July 2020 to November 2021 (1 year and 5 months)',
                 points: [
-                    "Worked on 5 company projects, primarily serving as technical lead.",
+                    "Worked on company projects, primarily serving as technical lead.",
                     "Developed scalable, and maintainable front-end applications and back-end applications.",
                     "Did scores of research, documentation, and integration of third-party APIs and libraries for the company projects.",
                     "Communicated with clients, managed projects, led development teams, and organized releases.",

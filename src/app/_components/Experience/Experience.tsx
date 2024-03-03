@@ -9,7 +9,7 @@ import { fadeInUp } from '@/constants/FramerMotion/FramerMotion';
 export const Experience = () => {
 
     return (
-        <section id="experience" className="experience pt-24 lg:pt-20 snap-align-none lg:snap-center bg-cover parallax-container overflow-hidden relative bg-center bg-no-repeat h-fit lg:h-screen flex items-center content-center">
+        <section id="experience" className="experience pt-24 lg:pt-20 snap-align-none lg:snap-center bg-cover parallax-container overflow-hidden relative bg-center bg-no-repeat h-fit   flex items-center content-center">
             <Div id="experience-container" overrides='h-full w-full relative grid items-start overflow-auto lg:grid-cols-2 gap-6 max-w-6xl mx-auto p-4'>
                 <Div overrides='col-start-1 col-end-4 lg:col-start-1 lg:col-end-1'>
                     <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 , delay: 0.1} }} overrides='text-5xl mb-6 mt-6' >Education</Heading>
