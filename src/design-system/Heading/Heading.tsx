@@ -15,7 +15,7 @@ interface HeadingProps {
 }
 
 export function Heading({ type = 'h1', children, overrides = '', framerMotionProps }: HeadingProps) {
-  const commonStyles = 'font-heading text-left font-bold';
+  const commonStyles = 'font-heading text-left font-bold text-main';
   const { ref, inView } = useInView();
 
   const styleClasses = `${commonStyles} ${overrides}`;

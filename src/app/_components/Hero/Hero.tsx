@@ -12,7 +12,7 @@ export const Hero = () => {
             <Div overrides='hero h-full w-full relative grid items-center'>
                 <Div overrides='mt-auto max-w-6xl grid justify-center mx-auto p-4' >
                     <Div overrides=' animate-fade-in'>
-                        <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 } }} overrides='text-6xl my-6' >
+                        <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 } }} overrides='text-6xl lg:text-7xl my-6' >
                             Jer Carlo Catallo
                         </Heading>
                         <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.2 } }} type='h2' overrides='text-4xl my-6 mt-0 text-primary-color-2'>

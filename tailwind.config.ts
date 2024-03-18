@@ -29,8 +29,8 @@ const config: Config = {
       surface: '#000000', // Black
 
       // Text Colors
-      main: '#000000', // Black
-      ['main-light']: '#585858',
+      main: '#36454F', // Black
+      ['main-light']: '#ffffff',
       light: '#ffffff', // White
       ['on-primary']: '#ffffff',
     },

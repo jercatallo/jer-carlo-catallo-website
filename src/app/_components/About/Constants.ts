@@ -28,8 +28,9 @@ export const Skills = [
     'Netlify',
     'Github Pages',
     'Render',
-    'Ubuntu',
+    'macOS',
     'Windows',
+    'Ubuntu',
     'Nginx',
     'Agile/Scrum',
 ];

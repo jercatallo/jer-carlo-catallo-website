@@ -1,5 +1,5 @@
 #experience {
-    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.95)), /* White overlay */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.90), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.90)), /* White overlay */
     url('https://d29z7ac04eim28.cloudfront.net/city-img.jpeg') center/cover no-repeat fixed;
 }
 

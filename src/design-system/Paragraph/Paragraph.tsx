@@ -13,7 +13,7 @@ type ParagraphProps = {
 
 export function Paragraph({ children, overrides = '', framerMotionProps }: ParagraphProps) {
 
-    const commonStyles = 'font-body';
+    const commonStyles = 'font-body text-main';
     const { ref, inView, entry } = useInView();
     const styleClasses = `${commonStyles} ${overrides}`;
     if (framerMotionProps) {
