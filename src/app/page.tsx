@@ -9,6 +9,7 @@ const Navigation = dynamic(
 import './globals.css';
 import { Footer } from '@/components';
 import { Div } from '@/design-system/Div';
+import { Projects } from './_components/Projects';
 
 
 const montserrat = Montserrat({
@@ -29,6 +30,7 @@ export default function Home() {
         <Hero></Hero>
         <About></About>
         <Experience></Experience>
+        {/* <Projects></Projects> */}
       </main>
     </Div>
   );

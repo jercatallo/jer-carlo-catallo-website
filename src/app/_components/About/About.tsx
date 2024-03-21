@@ -11,7 +11,7 @@ import { Skills } from './Constants';
 export const About = () => {
 
     return (
-        <section id="about" style={{
+        <section style={{
             background: `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`,
         }} className="snap-align-none lg:snap-center relative bg-center bg-no-repeat h-fit lg:5/6 grid items-center px-4">

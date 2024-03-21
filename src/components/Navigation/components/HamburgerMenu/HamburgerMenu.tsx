@@ -11,14 +11,9 @@ export const HamburgerMenu = () => {
     const screenSize = useScreenSize();
     
   const onSectionClick = ({ elementClassName }: { elementClassName: string }) => {
-    const element = document.getElementById(elementClassName);
-    element?.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
-    if (scrollPosition !== 'experience' && typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width >= TailwindConstants.ThemeScreens.lg) {
-      const experienceContainer = document.getElementById('experience-container');
-      if (experienceContainer) {
-        experienceContainer.scrollTop = 0;
-      }
-    }
+    const element = document.querySelector(`.${elementClassName}`);
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+    setShowHamburgerMenu(false);
   };
 
     return (
@@ -49,6 +44,9 @@ export const HamburgerMenu = () => {
               </li>
               <li onClick={() => onSectionClick({ elementClassName: 'experience' })}>
                 <a href='#' className={`block py-2 duration-500 text-main rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Experience</a>
+              </li>
+              <li onClick={() => onSectionClick({ elementClassName: 'projects' })}>
+                <a href='#' className={`block py-2 duration-500 text-main rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Projects</a>
               </li>
               <li>
                 <a target='_blank' href='https://drive.google.com/file/d/1evTroPQysDvLXgTliyGe-n3UbZR6IVzs/view?usp=sharing' className={`block py-2 duration-500 text-main rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Resume</a>

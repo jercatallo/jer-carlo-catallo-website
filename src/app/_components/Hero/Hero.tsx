@@ -8,7 +8,7 @@ import { Div } from '@/design-system/Div';
 export const Hero = () => {
 
     return (
-        <section id="hero" className="pt-16 lg:pt-0 snap-align-none lg:snap-center bg-cover h-full parallax-container overflow-hidden relative bg-center bg-no-repeat lg:h-screen flex items-center content-center">
+        <section className="pt-16 lg:pt-0 snap-align-none lg:snap-center bg-cover h-full overflow-hidden relative bg-center bg-no-repeat lg:h-screen flex items-center content-center">
             <Div overrides='hero h-full w-full relative grid items-center'>
                 <Div overrides='mt-auto max-w-6xl grid justify-center mx-auto p-4' >
                     <Div overrides=' animate-fade-in'>

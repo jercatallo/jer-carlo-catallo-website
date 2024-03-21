@@ -1,15 +1,15 @@
-#hero {
+.hero {
     background: url('https://d29z7ac04eim28.cloudfront.net/hero-bg.jpg') center/cover no-repeat fixed;
 }
 
 @media screen and (max-width: 1024px) {
-    #hero {
+    .hero {
         background: url('https://d29z7ac04eim28.cloudfront.net/hero-bg-phone.jpg') center/cover no-repeat fixed;
     }
 }
 
 @media screen and (max-width: 640px) {
-    #hero {
+    .hero {
        min-height: 850px;
     }
 }

@@ -9,11 +9,22 @@ import { HamburgerMenu } from './components/HamburgerMenu';
 import { NavigationProvider, useNavigation } from './NavigationContext';
 import { Div } from '@/design-system/Div';
 import './Navigation.css';
+import { ThemeColors } from '@/constants/Tailwind/Tailwind';
 
 const NavigationComponent = () => {
   const { showHamburgerMenu, setShowHamburgerMenu, scrollPosition, setScrollPosition } = useNavigation();
   const screenSize = useScreenSize();
+  const [isInHeroSection, setIsInHeroSection] = useState(true);
 
+
+  useEffect(() => {
+    const navigation = document.getElementById('navigation');
+    if (typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width < TailwindConstants.ThemeScreens.lg) {
+      if (navigation) {
+        navigation.style.background = 'white';
+      }
+    }
+  },[screenSize]);
 
   function handleScroll() {
     if (window.innerWidth >= TailwindConstants.ThemeScreens.lg) {
@@ -24,35 +35,46 @@ const NavigationComponent = () => {
       const hero = document.querySelector('.hero');
       const about = document.querySelector('.about');
       const experience = document.querySelector('.experience');
+      const projects = document.querySelector('.projects');
 
-      if(hero && navigation){
-        if((window.scrollY + hero.getBoundingClientRect().top) < 0 ){
-         navigation.style.boxShadow = '0 4px 8px -2px silver';
-        }else{
+      if (hero && navigation) {
+        if ((window.scrollY + hero.getBoundingClientRect().top) < 0 && screenSize.width >= TailwindConstants.ThemeScreens.lg) {
+          navigation.style.boxShadow = '0 4px 8px -2px silver';
+          navigation.style.background = ThemeColors['primary-color'];
+          setIsInHeroSection(false);
+        } else {
+          navigation.style.background = 'white';
           navigation.style.boxShadow = 'none';
+          setIsInHeroSection(true);
         }
       }
 
-        if(experience){
-          if((window.scrollY + experience.getBoundingClientRect().top) < 300){
-            setScrollPosition('experience');
-            return;
-          }
+      if (projects) {
+        if ((window.scrollY + projects.getBoundingClientRect().top) < 300) {
+          setScrollPosition('projects');
+          return;
         }
+      }
 
-        if(about){
-          if((window.scrollY + about.getBoundingClientRect().top) < 300){
-            setScrollPosition('about');
-            return;
-          }
+      if (experience) {
+        if ((window.scrollY + experience.getBoundingClientRect().top) < 300) {
+          setScrollPosition('experience');
+          return;
         }
-    
+      }
 
-        if(hero){
-          if((window.scrollY + hero.getBoundingClientRect().top) < 300){
-            setScrollPosition('hero');
-          }
+      if (about) {
+        if ((window.scrollY + about.getBoundingClientRect().top) < 300) {
+          setScrollPosition('about');
+          return;
         }
+      }
+
+      if (hero) {
+        if ((window.scrollY + hero.getBoundingClientRect().top) < 300) {
+          setScrollPosition('hero');
+        }
+      }
     }
   }
   ``;
@@ -86,34 +108,47 @@ const NavigationComponent = () => {
   }, [screenSize, scrollPosition]);
 
   const navigationTextColor = useMemo(() => {
+    if (typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width < TailwindConstants.ThemeScreens.lg) {
+      return 'text-main';
+    }
+    if(!isInHeroSection){
+      return 'text-main-light';
+    }
+
     return 'text-main';
-  }, []);
+  }, [isInHeroSection, screenSize]);
 
   const brandTextColor = useMemo(() => {
+    if (typeof window !== 'undefined' && document.readyState === 'complete' && screenSize.width < TailwindConstants.ThemeScreens.lg) {
+      return 'text-primary-color';
+    }
+    if(!isInHeroSection){
+      return 'text-main-light';
+    }
+    
     return 'text-primary-color';
-  }, []);
-
-  const navigationBackground = useMemo(() => {
-    return 'background';
-  }, []);
+  }, [isInHeroSection, screenSize]);
 
   const onSectionClick = ({ elementClassName }: { elementClassName: string }) => {
-    const element = document.getElementById(elementClassName);
+    const element = document.querySelector(`.${elementClassName}`);
     element?.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   };
 
-  const checkIfInSection = useCallback(({section}: {section: string}) => {
-    if(section === 'about' && scrollPosition === 'about' || section === 'hero' && scrollPosition === 'hero' || section === 'experience' && scrollPosition === 'experience'){
+  const checkIfInSection = useCallback(({ section }: { section: string }) => {
+    if ((section === 'about' && scrollPosition === 'about') || (section === 'hero' && scrollPosition === 'hero') || (section === 'experience' && scrollPosition === 'experience') || (section === 'projects' && scrollPosition === 'projects')) {
+      if(!isInHeroSection){
+        return 'font-bold text-main-light';
+      }
       return 'font-bold text-primary-color';
     }
-  },[scrollPosition]);
+  }, [scrollPosition,isInHeroSection]);
 
   return (
     <>
-      <nav id='navigation' style={{ background: navigationBackground }} className={`bg-${navigationBackground} duration-500 z-10 mb-12 border-gray-200 fixed left-0 right-0 top-0`}>
+      <nav id='navigation' style={{background: 'white'}} className={`duration-500 z-10 mb-12 border-gray-200 fixed left-0 right-0 top-0`}>
         <Div overrides='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <a href='#' className='flex items-center space-x-3 rtl:space-x-reverse'>
-            <span className={`font-heading ${navigationTextColor} self-center text-5xl whitespace-nowrap font-bold`}> jc  </span> <span className={`mx-5 font-heading  ${brandTextColor} self-center text-5xl whitespace-nowrap font-bold`}>;</span>
+            <span className={`font-heading ${navigationTextColor} self-center text-5xl whitespace-nowrap font-bold`}> jc  </span> <span className={`mx-5 font-heading ${brandTextColor} self-center text-5xl whitespace-nowrap font-bold`}>;</span>
           </a>
           <button data-collapse-toggle='navbar-default' type='button' onClick={() => {
             setShowHamburgerMenu(prevShowHamburgerMenu => !prevShowHamburgerMenu);
@@ -126,13 +161,16 @@ const NavigationComponent = () => {
           <Div overrides='hidden w-full lg:block lg:w-auto'>
             <ul className='font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white'>
               <li onClick={() => onSectionClick({ elementClassName: 'hero' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({section: 'hero'})} bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0`} aria-current='page'>Home</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'hero' })} bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0`} aria-current='page'>Home</a>
               </li>
               <li onClick={() => onSectionClick({ elementClassName: 'about' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({section: 'about'})} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>About</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'about' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>About</a>
               </li>
               <li onClick={() => onSectionClick({ elementClassName: 'experience' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({section: 'experience'})} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Experience</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'experience' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Experience</a>
+              </li>
+              <li onClick={() => onSectionClick({ elementClassName: 'projects' })}>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'projects' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Projects</a>
               </li>
               <li>
                 <a target='_blank' href='https://drive.google.com/file/d/1evTroPQysDvLXgTliyGe-n3UbZR6IVzs/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Resume</a>

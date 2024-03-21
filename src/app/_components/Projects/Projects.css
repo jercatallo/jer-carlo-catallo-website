@@ -1,0 +1,10 @@
+.projects {
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.90)), /* White overlay */
+    url('https://d29z7ac04eim28.cloudfront.net/city-img.jpg') center/cover no-repeat fixed;
+}
+
+@media screen and (max-width: 640px) {
+    .projects {
+       min-height: 850px;
+    }
+}
