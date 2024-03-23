@@ -5,7 +5,7 @@ import { Div } from '@/design-system/Div';
 
 export const Footer = () => {
     return (
-        <footer className="col-start-1 col-end-4 py-6 overflow-hidden relative bg-center bg-no-repeat grid gap-4 items-center content-center text-center">
+        <footer className="col-start-1 col-end-4 py-6 pt-16 overflow-hidden relative bg-center bg-no-repeat grid gap-4 items-center content-center text-center">
             <Div overrides='relative grid items-start overflow-auto gap-6 max-w-6xl mx-auto p-4 pb-0 text-center' >
                 <Div overrides='flex gap-2 mt-5 flex-wrap'>
                     <a href='https://github.com/jercatallo' target='_blank' className='animate-button-animations-1'>
@@ -42,11 +42,8 @@ export const Footer = () => {
                     </a>
                 </Div>
             </Div>
-            <Heading overrides='text-center text-primary-color text-sm'>Please feel free to get in touch!</Heading>
-
-
-            <Heading overrides='text-center font-light pt-3 text-sm'>© 2024 All Rights Reserved | Jer Carlo Catallo</Heading>
-
+            <Heading overrides='text-center text-main-light text-sm' framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0 } }}>Please feel free to get in touch!</Heading>
+            <Heading overrides='text-center font-light text-main-light pt-3 text-sm' framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0} }}>© 2024 All Rights Reserved | Jer Carlo Catallo</Heading>
         </footer>
     );
 };

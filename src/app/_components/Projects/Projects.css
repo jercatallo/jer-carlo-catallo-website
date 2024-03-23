@@ -8,3 +8,7 @@
        min-height: 850px;
     }
 }
+.project-image {
+    filter:  drop-shadow(12px 12px #003E85);
+  }
+  

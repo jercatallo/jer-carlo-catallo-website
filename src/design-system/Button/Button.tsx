@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 
 type ButtonProps = {
   children: ReactNode;
-  type: 'primary' | 'secondary-2';
+  type?: 'primary' | 'primary-2' | string;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   buttonType?: 'button' | 'submit' | 'reset';
   overrides?: string;
@@ -16,7 +16,7 @@ type ButtonProps = {
 
 export const Button = ({
   children,
-  type,
+  type = 'primary',
   onClick,
   buttonType = 'button',
   overrides = '',
@@ -24,8 +24,8 @@ export const Button = ({
 }: ButtonProps) => {
   const { ref, inView, entry } = useInView();
   const buttonStyles: Record<string, string> = {
-    'primary': 'bg-primary-color py-1 py-2 hover:bg-primary-color-2',
-    'primary-2': 'bg-primary-color py-1 py-2 hover:bg-primary-color-2',
+    'primary': 'bordered border-solid border-2 border-primary-color bg-primary-color py-1 py-2 px-2 hover:bg-primary-color-2',
+    'primary-2': 'bordered border-solid border-2 border-primary-color py-1 py-2 px-2 hover:bg-primary-color-2',
   };
 
   const commonStyles = 'inline w-fit rounded text-on-primary';
@@ -45,7 +45,7 @@ export const Button = ({
         variants={framerMotionProps.variants}
         type={buttonType}
         className={styleClasses}
-        onClick={onClick}
+        // onClick={onClick}
       >
         {children}
       </motion.button>

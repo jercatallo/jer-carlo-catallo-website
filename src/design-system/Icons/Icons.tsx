@@ -1,10 +1,12 @@
 import { faCheck, faCircle, faPhone, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaGithub, FaLinkedin, FaArrowDown, FaReact, FaHtml5, FaCss3, FaAws } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaArrowDown, FaReact, FaHtml5, FaCss3, FaAws, FaSass, FaDocker, FaUbuntu } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneSquare } from "react-icons/fa";
+import { SiGithubactions, SiLetsencrypt, SiNextdotjs, SiNginx, SiSnyk, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { IoLogoJavascript } from 'react-icons/io';
 
-type IconType = {
+export type IconType = {
     styleClasses?: string,
 }
 
@@ -54,4 +56,48 @@ export const CircleIcon = ({styleClasses}: IconType) => {
 
 export const PhoneIcon = ({styleClasses}: IconType) => {
     return <FaPhoneSquare className={styleClasses} />;
+};
+
+export const JavaScriptIcon = ({styleClasses}: IconType) => {
+    return <IoLogoJavascript className={styleClasses} />;
+};
+
+export const TypeScriptIcon = ({styleClasses}: IconType) => {
+    return <SiTypescript className={styleClasses} />;
+};
+
+export const NextJSIcon = ({styleClasses}: IconType) => {
+    return <SiNextdotjs className={styleClasses} />;
+};
+
+export const SassIcon = ({styleClasses}: IconType) => {
+    return <FaSass className={styleClasses} />;
+};
+
+export const NginxIcon = ({styleClasses}: IconType) => {
+    return <SiNginx className={styleClasses} />;
+};
+
+export const GithubActionsIcon = ({styleClasses}: IconType) => {
+    return <SiGithubactions className={styleClasses} />;
+};
+
+export const DockerIcon = ({styleClasses}: IconType) => {
+    return <FaDocker className={styleClasses} />;
+};
+
+export const SnykIcon = ({styleClasses}: IconType) => {
+    return <SiSnyk className={styleClasses} />;
+};
+
+export const UbuntuIcon = ({styleClasses}: IconType) => {
+    return <FaUbuntu className={styleClasses} />;
+};
+
+export const TailwindIcon = ({styleClasses}: IconType) => {
+    return <SiTailwindcss className={styleClasses} />;
+};
+
+export const LetsEncryptIcon = ({styleClasses}: IconType) => {
+    return <SiLetsencrypt className={styleClasses} />;
 };

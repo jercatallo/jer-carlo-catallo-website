@@ -3,6 +3,7 @@
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useScreenSize } from '@/hooks';
+import {motion} from 'framer-motion';
 import { TailwindConstants } from '@/constants/Tailwind';
 import { Logger } from '@/utils';
 import { HamburgerMenu } from './components/HamburgerMenu';
@@ -10,6 +11,7 @@ import { NavigationProvider, useNavigation } from './NavigationContext';
 import { Div } from '@/design-system/Div';
 import './Navigation.css';
 import { ThemeColors } from '@/constants/Tailwind/Tailwind';
+import { fadeInUp } from '@/constants/FramerMotion/FramerMotion';
 
 const NavigationComponent = () => {
   const { showHamburgerMenu, setShowHamburgerMenu, scrollPosition, setScrollPosition } = useNavigation();
@@ -137,7 +139,7 @@ const NavigationComponent = () => {
   const checkIfInSection = useCallback(({ section }: { section: string }) => {
     if ((section === 'about' && scrollPosition === 'about') || (section === 'hero' && scrollPosition === 'hero') || (section === 'experience' && scrollPosition === 'experience') || (section === 'projects' && scrollPosition === 'projects')) {
       if(!isInHeroSection){
-        return 'font-bold text-main-light';
+        return 'underline underline-offset-8 text-main-light';
       }
       return 'font-bold text-primary-color';
     }
@@ -145,7 +147,14 @@ const NavigationComponent = () => {
 
   return (
     <>
-      <nav id='navigation' style={{background: 'white'}} className={`duration-500 z-10 mb-12 border-gray-200 fixed left-0 right-0 top-0`}>
+      <motion.nav initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 1 }}
+            animate={'animate'}
+            // {...framerMotionProps.variants}
+            variants={fadeInUp} 
+             id='navigation' style={{background: 'white'}} className={`duration-500 z-10 mb-12 border-gray-200 fixed left-0 right-0 top-0`}>
         <Div overrides='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <a href='#' className='flex items-center space-x-3 rtl:space-x-reverse'>
             <span className={`font-heading ${navigationTextColor} self-center text-5xl whitespace-nowrap font-bold`}> jc  </span> <span className={`mx-5 font-heading ${brandTextColor} self-center text-5xl whitespace-nowrap font-bold`}>;</span>
@@ -182,7 +191,7 @@ const NavigationComponent = () => {
             </ul>
           </Div>
         </Div>
-      </nav>
+      </motion.nav>
       <HamburgerMenu></HamburgerMenu>
     </>
 

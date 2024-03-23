@@ -1,21 +1,46 @@
+import React from 'react';
+import {ReactIcon} from '../../../design-system/Icons';
+
 export const ProjectsList = [
     {
-        program: 'Bachelor of Science in Computer Science',
-        school: 'Don Honorio Ventura State University',
-        level: 'College, 2019 - 2023',
-        location: 'Pampanga, Philippines',
-        year: '2019 - 2023',
-        points: [
-            'Most Innovative Thesis Project (2023)',
-            'Code Clash: The Ultimate Hackathon Showdown Champion (2023)',
-            'IRCITE 2022 TORO Cloud Hackathon Challenge 1st Runner-Up (2022)',
-            'Run IT Code Fest Champion (2022)',
-            'Gold Medalist in University Chess Intramurals (2022)',
-            'Dean’s Lister (2022)',
-            'Online Chess Tournament 2nd Place Overall (2021)',
-            'Dean’s Lister (2021)',
-            'Gold Medalist in University Chess Intramurals (2020)',
-            'Web Development Competition Champion (2020)',
-        ],
+        title: 'My Portfolio Website',
+        description: "This website serves as your window into my world of web development expertise. Here, you'll discover a showcase of my skills and experience through engaging presentations of my projects.",
+        image: `${process.env.IMAGE_URL}/portfolio-image.jpg`,
+        // siteUrl: 'https://jercarlocatallo.com',
+        repositoryUrl: 'https://github.com/jercatallo/jer-carlo-catallo-website',
+        techstacks: ['HTML', 'CSS', 'Tailwind', 'TypeScript', 'Next.js', 'Github Actions', 'Docker', 'Snyk', 'AWS','Nginx', 'Ubuntu'],
+    },
+
+    {
+        title: 'Meta Little Lemon Application',
+        description: 'This web application, built as part of a Meta front-end development course, simplifies the process of booking a table at your favorite restaurant. Search for a convenient time, reserve your spot with a few clicks, and prepare to savor delicious food – all within the comfort of Little Lemon.',
+        image: `${process.env.IMAGE_URL}/little-lemon-app.jpg`,
+        siteUrl: 'https://meta-front-end-developer-capstone-e1ky.onrender.com/',
+        repositoryUrl: 'https://github.com/jercatallo/meta-front-end-developer-capstone',
+        techstacks: ['HTML', 'CSS', 'JavaScript', 'React'],
+    },
+    {
+        title: 'Github Repository Explorer',
+        description: 'Empower your exploration of open-source code with this React-based GitHub Repository Explorer. Search for users and effortlessly navigate their public repositories, streamlining your workflow and fostering discovery of new projects and contributors.',
+        image: `${process.env.IMAGE_URL}/repository-explorer.jpg`,
+        siteUrl: 'https://github-repositories-explorer.onrender.com/',
+        repositoryUrl: 'https://github.com/jercatallo/github-repositories-explorer',
+        techstacks: ['HTML', 'CSS', 'TypeScript', 'React'],
+    },
+    {
+        title: 'Pokemon App',
+        description: 'This React application is a comprehensive Pokédex, a digital encyclopedia of Pokémon! It leverages the official Pokémon API to provide users with detailed information about their favorite Pokémon.',
+        image: `${process.env.IMAGE_URL}/pokemon-app.jpg`,
+        siteUrl: 'https://dashboard-framework-demo-app.onrender.com',
+        repositoryUrl: 'https://github.com/jercatallo/dashboard-framework-demo-app',
+        techstacks: ['HTML', 'CSS', 'JavaScript', 'React'],
+    },
+    {
+        title: 'Chuck Norris App',
+        description: "Prepare to unleash a barrage of side-splitting humor with the Chuck Norris Joke Generator! This application leverages the official Chuck Norris API to deliver an endless supply of hilarious jokes featuring the legendary martial artist.",
+        image: `${process.env.IMAGE_URL}/chuck-norris-app.jpg`,
+        siteUrl: 'https://jercatallo.github.io/chuck-jokes-app',
+        repositoryUrl: 'https://github.com/jercatallo/chuck-jokes-app',
+        techstacks: ['HTML', 'CSS', 'Sass', 'JavaScript', 'React'],
     },
 ];

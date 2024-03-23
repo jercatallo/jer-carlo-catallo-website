@@ -1,13 +1,13 @@
 import React from 'react';
 import { About, Hero, Experience } from './_components';
-import { Montserrat, Inter } from 'next/font/google';
+import { Montserrat, Inter, Sora } from 'next/font/google';
 import dynamic from 'next/dynamic';
 const Navigation = dynamic(
   () => import('../components/Navigation/Navigation'),
   { ssr: false }
 );
 import './globals.css';
-import { Footer } from '@/components';
+import { Footer, Loading } from '@/components';
 import { Div } from '@/design-system/Div';
 import { Projects } from './_components/Projects';
 
@@ -20,9 +20,14 @@ const inter = Inter({
   subsets: ['latin'],
 });
 
+const sora = Inter({
+  subsets: ['latin'],
+});
+
+
 export default function Home() {
   return (
-    <Div overrides={`relative ${montserrat.className} ${inter.className}`}>
+    <Div overrides={`relative ${montserrat.className} ${inter.className} ${sora.className}`}>
       <header className='relative'>
         <Navigation></Navigation>
       </header>
@@ -30,8 +35,9 @@ export default function Home() {
         <Hero></Hero>
         <About></About>
         <Experience></Experience>
-        {/* <Projects></Projects> */}
+        <Projects></Projects>
       </main>
+      <Loading></Loading>
     </Div>
   );
 }

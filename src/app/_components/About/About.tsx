@@ -7,6 +7,7 @@ import { fadeInUp } from '@/constants/FramerMotion/FramerMotion';
 
 import { Div } from '@/design-system/Div';
 import { Skills } from './Constants';
+import Image from 'next/image';
 
 export const About = () => {
 
@@ -41,7 +42,8 @@ export const About = () => {
 
                     </Div>
                     <Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0 } }}>
-                        <img className='my-image rounded max-w-xs rotate-2 m-auto bordered py-4 lg:py-0 w-4/5 md:w-72 lg:w-96 h-auto' src={`${process.env.IMAGE_URL}/full-body.jpg`} alt='My Image'></img>
+                    {/* <Image alt="Jer Carlo Image" layout="responsive" className='rounded my-image rounded max-w-xs rotate-2 m-auto bordered py-4' width={3648} height={5472} src={`${process.env.IMAGE_URL}/full-body.jpg`}></Image> */}
+                        <img className='project-image rounded max-w-xs rotate-2 m-auto bordered py-4 lg:py-0 w-4/5 md:w-72 lg:w-96 h-auto' src={`${process.env.IMAGE_URL}/full-body.jpg`} alt='My Image'></img>
                     </Div>
                 </Div>
 
