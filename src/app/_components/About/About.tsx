@@ -24,7 +24,7 @@ export const About = () => {
                         </Heading>
                         <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.4 } }} overrides='leading-relaxed text-md max-w-2xl text-lg text-main-light mb-5'>  I&apos;m a passionate and philomath Software Engineer from the Philippines, currently working at meldCX as a Full-stack developer. I specialize in utilizing JavaScript ecosystem on building full-stack web applications, and also employing Cloud Computing Services and DevOps Practices to ensure efficient and scalable solutions.
                         </Paragraph>
-                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.6 } }} overrides='leading-relaxed text-md max-w-2xl text-main-light mb-5'>  Beyond coding, I enjoy stargazing with my newtonian telescope, practicing boxing and taekwondo, exploring new music, savoring delicious food, and, of course, learning, learning, and learning again.
+                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.6 } }} overrides='leading-relaxed text-md max-w-2xl text-lg text-main-light mb-5'>  Beyond coding, I enjoy stargazing with my newtonian telescope, practicing boxing and taekwondo, exploring new music, savoring delicious food, and, of course, learning, learning, and learning again.
                         </Paragraph>
 
 

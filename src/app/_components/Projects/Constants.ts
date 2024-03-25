@@ -1,6 +1,3 @@
-import React from 'react';
-import {ReactIcon} from '../../../design-system/Icons';
-
 export const ProjectsList = [
     {
         title: 'My Portfolio Website',
@@ -34,13 +31,5 @@ export const ProjectsList = [
         siteUrl: 'https://dashboard-framework-demo-app.onrender.com',
         repositoryUrl: 'https://github.com/jercatallo/dashboard-framework-demo-app',
         techstacks: ['HTML', 'CSS', 'JavaScript', 'React'],
-    },
-    {
-        title: 'Chuck Norris App',
-        description: "Prepare to unleash a barrage of side-splitting humor with the Chuck Norris Joke Generator! This application leverages the official Chuck Norris API to deliver an endless supply of hilarious jokes featuring the legendary martial artist.",
-        image: `${process.env.IMAGE_URL}/chuck-norris-app.jpg`,
-        siteUrl: 'https://jercatallo.github.io/chuck-jokes-app',
-        repositoryUrl: 'https://github.com/jercatallo/chuck-jokes-app',
-        techstacks: ['HTML', 'CSS', 'Sass', 'JavaScript', 'React'],
     },
 ];
