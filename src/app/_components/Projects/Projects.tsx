@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { AWSIcon, CSSIcon, DockerIcon, GithubActionsIcon, HTMLIcon, Heading, IconType, JavaScriptIcon, LetsEncryptIcon, NextJSIcon, NginxIcon, Paragraph, ReactIcon, SassIcon, SnykIcon, TailwindIcon, TypeScriptIcon, UbuntuIcon } from '@/design-system';
+import { AWSIcon, CSSIcon, DockerIcon, GithubActionsIcon, HTMLIcon, Heading, IconType, JavaScriptIcon, LetsEncryptIcon, NextJSIcon, NginxIcon, Paragraph, ReactIcon, RenderIcon, SassIcon, SnykIcon, TailwindIcon, TypeScriptIcon, UbuntuIcon, ViteIcon, WebpackIcon } from '@/design-system';
 import './Projects.css';
 import { ProjectsList } from './Constants';
 import { Footer } from '@/components';
@@ -28,6 +28,9 @@ export const Projects = () => {
         'Tailwind': <TailwindIcon styleClasses={iconClasses} />,
         "Let's Encrypt": <LetsEncryptIcon styleClasses={iconClasses} />,
         "Sass": <SassIcon styleClasses={iconClasses} />,
+        "Webpack": <WebpackIcon styleClasses={iconClasses} />,
+        "Render": <RenderIcon styleClasses={iconClasses} />,
+        "Vite": <ViteIcon styleClasses={iconClasses} />,
     };
 
     return (
@@ -47,9 +50,9 @@ export const Projects = () => {
                                 <Paragraph overrides='text-md my-0 text-main-light'>{project.description}</Paragraph>
                                 <Div overrides='flex py-4 gap-3 flex-wrap'>
                                     {project.techstacks.map((tech) => {
-                                        return <span key={tech}>{TechStacksMapping[tech]}</span>;
-
-
+                                        if(TechStacksMapping[tech]){
+                                            return <span key={tech}>{TechStacksMapping[tech]}</span>;
+                                        }
                                     })}
 
                                 </Div>

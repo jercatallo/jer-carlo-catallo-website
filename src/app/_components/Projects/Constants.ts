@@ -14,7 +14,7 @@ export const ProjectsList = [
         image: `${process.env.IMAGE_URL}/little-lemon-app.jpg`,
         siteUrl: 'https://meta-front-end-developer-capstone-e1ky.onrender.com/',
         repositoryUrl: 'https://github.com/jercatallo/meta-front-end-developer-capstone',
-        techstacks: ['HTML', 'CSS', 'JavaScript', 'React'],
+        techstacks: ['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React', 'Webpack', 'Render'],
     },
     {
         title: 'Github Repository Explorer',
@@ -22,14 +22,14 @@ export const ProjectsList = [
         image: `${process.env.IMAGE_URL}/repository-explorer.jpg`,
         siteUrl: 'https://github-repositories-explorer.onrender.com/',
         repositoryUrl: 'https://github.com/jercatallo/github-repositories-explorer',
-        techstacks: ['HTML', 'CSS', 'TypeScript', 'React'],
+        techstacks: ['HTML', 'CSS', 'Tailwind', 'TypeScript', 'React', 'Vite', 'Render'],
     },
     {
-        title: 'Pokemon App',
-        description: 'This React application is a comprehensive Pokédex, a digital encyclopedia of Pokémon! It leverages the official Pokémon API to provide users with detailed information about their favorite Pokémon.',
+        title: 'Dashboard Framework Demo App',
+        description: 'This repository houses a versatile Dashboard Framework designed to streamline the development of client-specific dashboards. The framework provides a set of reusable components, allowing easy configuration of dashboards with varying layouts, column numbers, and widget arrangements.',
         image: `${process.env.IMAGE_URL}/pokemon-app.jpg`,
         siteUrl: 'https://dashboard-framework-demo-app.onrender.com',
         repositoryUrl: 'https://github.com/jercatallo/dashboard-framework-demo-app',
-        techstacks: ['HTML', 'CSS', 'JavaScript', 'React'],
+        techstacks: ['HTML', 'CSS', 'Tailwind', 'JavaScript', 'React', 'Webpack', 'Render'],
     },
 ];

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaGithub, FaLinkedin, FaArrowDown, FaReact, FaHtml5, FaCss3, FaAws, FaSass, FaDocker, FaUbuntu } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneSquare } from "react-icons/fa";
-import { SiGithubactions, SiLetsencrypt, SiNextdotjs, SiNginx, SiSnyk, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import { SiGithubactions, SiLetsencrypt, SiNextdotjs, SiNginx, SiRender, SiSnyk, SiTailwindcss, SiTypescript, SiVite, SiWebpack } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io';
 
 export type IconType = {
@@ -100,4 +100,16 @@ export const TailwindIcon = ({styleClasses}: IconType) => {
 
 export const LetsEncryptIcon = ({styleClasses}: IconType) => {
     return <SiLetsencrypt className={styleClasses} />;
+};
+
+export const WebpackIcon = ({styleClasses}: IconType) => {
+    return <SiWebpack className={styleClasses} />;
+};
+
+export const RenderIcon = ({styleClasses}: IconType) => {
+    return <SiRender className={styleClasses} />;
+};
+
+export const ViteIcon = ({styleClasses}: IconType) => {
+    return <SiVite className={styleClasses} />;
 };
