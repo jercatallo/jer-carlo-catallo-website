@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { AWSIcon, CSSIcon, DockerIcon, GithubActionsIcon, HTMLIcon, Heading, IconType, JavaScriptIcon, LetsEncryptIcon, NextJSIcon, NginxIcon, Paragraph, ReactIcon, RenderIcon, SassIcon, SnykIcon, TailwindIcon, TypeScriptIcon, UbuntuIcon, ViteIcon, WebpackIcon } from '@/design-system';
+import { AWSIcon, CSSIcon, DockerIcon, GithubActionsIcon, HTMLIcon, Heading, IconType, JavaScriptIcon, JestIcon, LetsEncryptIcon, NPMIcon, NextJSIcon, NginxIcon, Paragraph, ReactIcon, RenderIcon, RollupIcon, SassIcon, SnykIcon, TailwindIcon, TypeScriptIcon, UbuntuIcon, ViteIcon, WebpackIcon } from '@/design-system';
 import './Projects.css';
 import { ProjectsList } from './Constants';
 import { Footer } from '@/components';
@@ -31,6 +31,9 @@ export const Projects = () => {
         "Webpack": <WebpackIcon styleClasses={iconClasses} />,
         "Render": <RenderIcon styleClasses={iconClasses} />,
         "Vite": <ViteIcon styleClasses={iconClasses} />,
+        "Rollup": <RollupIcon styleClasses={iconClasses} />,
+        "npm": <NPMIcon styleClasses={iconClasses} />,
+        "Jest": <JestIcon styleClasses={iconClasses} />,
     };
 
     return (

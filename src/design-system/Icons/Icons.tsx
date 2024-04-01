@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaGithub, FaLinkedin, FaArrowDown, FaReact, FaHtml5, FaCss3, FaAws, FaSass, FaDocker, FaUbuntu } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneSquare } from "react-icons/fa";
-import { SiGithubactions, SiLetsencrypt, SiNextdotjs, SiNginx, SiRender, SiSnyk, SiTailwindcss, SiTypescript, SiVite, SiWebpack } from 'react-icons/si';
+import { SiGithubactions, SiJest, SiLetsencrypt, SiNextdotjs, SiNginx, SiRender, SiRollupdotjs, SiSnyk, SiTailwindcss, SiTypescript, SiVite, SiWebpack } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io';
+import { RiNpmjsFill } from 'react-icons/ri';
 
 export type IconType = {
     styleClasses?: string,
@@ -112,4 +113,16 @@ export const RenderIcon = ({styleClasses}: IconType) => {
 
 export const ViteIcon = ({styleClasses}: IconType) => {
     return <SiVite className={styleClasses} />;
+};
+
+export const NPMIcon = ({styleClasses}: IconType) => {
+    return <RiNpmjsFill className={styleClasses} />;
+};
+
+export const RollupIcon = ({styleClasses}: IconType) => {
+    return <SiRollupdotjs className={styleClasses} />;
+};
+
+export const JestIcon = ({styleClasses}: IconType) => {
+    return <SiJest className={styleClasses} />;
 };
