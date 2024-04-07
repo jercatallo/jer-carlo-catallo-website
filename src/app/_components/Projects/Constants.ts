@@ -1,7 +1,7 @@
 export const ProjectsList = [
     {
         title: 'My Portfolio Website',
-        description: "This website serves as your window into my world of web development expertise. Here, you'll discover a showcase of my skills and experience through engaging presentations of my projects.",
+        description: "Explore presentations of my projects, showcasing the fusion of creativity and technology. Built with HTML, CSS, Tailwind CSS, TypeScript, Next.js, Github Actions, Docker, Snyk, AWS, Nginx, and Ubuntu.",
         image: `${process.env.IMAGE_URL}/portfolio-image.jpg`,
         // siteUrl: 'https://jercarlocatallo.com',
         repositoryUrl: 'https://github.com/jercatallo/jer-carlo-catallo-website',
@@ -9,7 +9,7 @@ export const ProjectsList = [
     },
     {
         title: 'barcode-tool',
-        description: 'Lightweight npm package that utilizes the Barcode Detection API to enable barcode scanning directly in web browsers. Easily integrate barcode scanning functionality into your web applications for inventory management, product identification, and more.',
+        description: 'Lightweight npm package to Seamlessly integrate barcode generation and scanning into web applications for inventory management, product identification, and more. Powered by TypeScript, Jest, Rollup, and npm.',
         image: `${process.env.IMAGE_URL}/barcode-tool.jpg`,
         siteUrl: 'https://www.npmjs.com/package/barcode-tool',
         repositoryUrl: 'https://github.com/jercatallo/barcode-tool',
@@ -17,7 +17,7 @@ export const ProjectsList = [
     },
     {
         title: 'Meta Little Lemon Application',
-        description: 'This web application, built as part of a Meta front-end development course, simplifies the process of booking a table at your favorite restaurant. Search for a convenient time, reserve your spot with a few clicks, and prepare to savor delicious food – all within the comfort of Little Lemon.',
+        description: 'This web application, built as part of a Meta front-end development course. The app simplifies the reservation process for restaurants. Developed with HTML, CSS, Tailwind CSS, JavaScript, React, Jest, Webpack, and Render.',
         image: `${process.env.IMAGE_URL}/little-lemon-app.jpg`,
         siteUrl: 'https://meta-front-end-developer-capstone-e1ky.onrender.com/',
         repositoryUrl: 'https://github.com/jercatallo/meta-front-end-developer-capstone',
@@ -25,7 +25,7 @@ export const ProjectsList = [
     },
     {
         title: 'Github Repository Explorer',    
-        description: 'Empower your exploration of open-source code with this React-based GitHub Repository Explorer. Search for users and effortlessly navigate their public repositories, streamlining your workflow and fostering discovery of new projects and contributors.',
+        description: 'Embark on a GitHub adventure, effortlessly exploring users public repositories with just their username! Powered by HTML, CSS, Tailwind CSS, TypeScript, React, Vite, and Render.',
         image: `${process.env.IMAGE_URL}/repository-explorer.jpg`,
         siteUrl: 'https://github-repositories-explorer.onrender.com/',
         repositoryUrl: 'https://github.com/jercatallo/github-repositories-explorer',
@@ -33,7 +33,7 @@ export const ProjectsList = [
     },
     {
         title: 'Dashboard Framework Demo App',
-        description: 'This repository houses a versatile Dashboard Framework designed to streamline the development of client-specific dashboards. The framework provides a set of reusable components, allowing easy configuration of dashboards with varying layouts, column numbers, and widget arrangements.',
+        description: 'Designed to streamline client-specific dashboard creation, leveraging reusable components for easy configuration of varying layouts, columns, and widget arrangements. Utilizes HTML, CSS, Tailwind, JavaScript, React, Jest, Webpack, and Render.',
         image: `${process.env.IMAGE_URL}/pokemon-app.jpg`,
         siteUrl: 'https://dashboard-framework-demo-app.onrender.com',
         repositoryUrl: 'https://github.com/jercatallo/dashboard-framework-demo-app',

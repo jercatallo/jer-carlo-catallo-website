@@ -1,18 +1,20 @@
 .projects {
-    background: linear-gradient(to right, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.90)), /* White overlay */
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.90)),
+    /* White overlay */
     url('https://d29z7ac04eim28.cloudfront.net/city-img.jpg') center/cover no-repeat fixed;
 }
 
 @media screen and (max-width: 640px) {
-    .projects {
-       min-height: 850px;
-    }
+  .projects {
+    min-height: 850px;
+  }
 }
-.project-image {
-    filter:  drop-shadow(12px 12px #003E85);
-  }
-  
 
-  .projects-container {
-    max-width: 1800px;
-  }
+.project-image {
+  filter: drop-shadow(12px 12px #003E85);
+}
+
+
+.projects-container {
+  max-width: 1800px;
+}

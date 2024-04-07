@@ -29,7 +29,7 @@ export const HamburgerMenu = () => {
             <Div overrides="p-4">
                 <Div overrides="flex flex-wrap items-center justify-between">
                     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span className={`font-heading text-main self-center text-5xl whitespace-nowrap font-bold`}> jc  </span> <span className={`mx-5 font-heading text-primary-color self-center text-5xl whitespace-nowrap font-bold`}>;</span>
+                        <span className={`font-heading text-main self-center text-5xl whitespace-nowrap font-bold`}> jer  </span> <span className={`mx-5 font-heading text-primary-color self-center text-5xl whitespace-nowrap font-bold`}>;</span>
                     </a>
                     <button onClick={() => setShowHamburgerMenu(false)}>
                         <ExitIcon styleClasses='text-2xl' />

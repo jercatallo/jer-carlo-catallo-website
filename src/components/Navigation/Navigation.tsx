@@ -14,7 +14,7 @@ import { ThemeColors } from '@/constants/Tailwind/Tailwind';
 import { fadeInUp } from '@/constants/FramerMotion/FramerMotion';
 
 const NavigationComponent = () => {
-  const { showHamburgerMenu, setShowHamburgerMenu, scrollPosition, setScrollPosition } = useNavigation();
+  const { setShowHamburgerMenu, scrollPosition, setScrollPosition } = useNavigation();
   const screenSize = useScreenSize();
   const [isInHeroSection, setIsInHeroSection] = useState(true);
 
@@ -157,7 +157,7 @@ const NavigationComponent = () => {
              id='navigation' style={{background: 'white'}} className={`duration-500 z-10 mb-12 border-gray-200 fixed left-0 right-0 top-0`}>
         <Div overrides='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <a href='#' className='flex items-center space-x-3 rtl:space-x-reverse'>
-            <span className={`font-heading ${navigationTextColor} self-center text-5xl whitespace-nowrap font-bold`}> jc  </span> <span className={`mx-5 font-heading ${brandTextColor} self-center text-5xl whitespace-nowrap font-bold`}>;</span>
+            <span className={`font-heading ${navigationTextColor} self-center text-5xl whitespace-nowrap font-bold`}> jer  </span> <span className={`mx-5 font-heading ${brandTextColor} self-center text-5xl whitespace-nowrap font-bold`}>;</span>
           </a>
           <button data-collapse-toggle='navbar-default' type='button' onClick={() => {
             setShowHamburgerMenu(prevShowHamburgerMenu => !prevShowHamburgerMenu);

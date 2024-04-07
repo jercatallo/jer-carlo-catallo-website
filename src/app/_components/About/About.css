@@ -1,5 +1,5 @@
 .my-image {
-  filter:  drop-shadow(16px 16px #003E85);
+  filter: drop-shadow(16px 16px #003E85);
 }
 
 .info {
@@ -7,17 +7,10 @@
   height: 55px;
 }
 
-.info-data {
-
-}
-
 .info-value {
-  background: linear-gradient(
-    to right,
-    #0175fa,
-    #01f9fc
-  );
+  background: linear-gradient(to right,
+      #0175fa,
+      #01f9fc);
   -webkit-background-clip: text;
   color: transparent;
 }
-

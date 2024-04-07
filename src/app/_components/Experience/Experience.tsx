@@ -12,7 +12,7 @@ export const Experience = () => {
         <section className="experience pt-24 lg:pt-20 snap-align-none lg:snap-center bg-cover overflow-hidden relative bg-center bg-no-repeat h-fit flex items-center content-center">
             <Div id="experience-container" overrides='h-full w-full relative grid items-start overflow-auto lg:grid-cols-2 gap-6 max-w-6xl mx-auto p-4 pb-0'>
                 <Div overrides='col-start-1 col-end-4 lg:col-start-1 lg:col-end-1'>
-                    <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 , delay: 0.1} }} overrides='text-6xl lg:text-7xl mb-6 mt-6' >Education</Heading>
+                    <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 , delay: 0.1} }} overrides='text-5xl lg:text-7xl mb-6 mt-6' >Education</Heading>
                     {Education && Education.map((education, index) => {
 
                         return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: index * 0.10 } }} key={`${education}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-primary-color'>
@@ -31,7 +31,7 @@ export const Experience = () => {
 
                 </Div>
                 <Div overrides='col-start-1 col-end-4 lg:col-start-2 lg:col-end-2'>
-                    <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.1} }} overrides='text-6xl lg:text-7xl mb-6 mt-6'>Experience</Heading>
+                    <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.1} }} overrides='text-5xl lg:text-7xl mb-6 mt-6'>Experience</Heading>
                     {WorkExperience && WorkExperience.map((experience, index) => {
 
                         return (<Div framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: index * 0.10} }} key={`${experience}-${index}`} overrides='border border-solid p-4 rounded-md mb-4 border-accent'>

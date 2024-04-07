@@ -43,7 +43,7 @@ export const WorkExperience = [
             {
                 title: 'Full Stack Developer',
                 location: 'Victoria, Australia | Full-time | Remote',
-                year: 'June 2023 to Currrent (9 Months)',
+                year: 'June 2023 to Currrent (10 Months)',
                 points: [
                     "Spearheading the development, and organizing project releases of the projects.",
                     "Performing API integrations from both internal and third-party APIs and carrying out Internet of Things (IoT) devices software integrations.",

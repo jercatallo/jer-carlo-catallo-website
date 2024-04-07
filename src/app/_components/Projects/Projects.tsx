@@ -39,7 +39,7 @@ export const Projects = () => {
     return (
         <section className="projects py-24 lg:py-20 snap-align-none lg:snap-center bg-cover parallax-container overflow-hidden relative bg-center bg-no-repeat h-fit flex items-center content-center">
             <Div overrides='projects-container h-full w-full relative items-start overflow-auto lg:grid-cols-2 gap-6 mx-auto p-4'>
-                <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.1 } }} overrides='mb-14 text-6xl lg:text-7xl mb-6 mt-6 text-main-light' >Featured Projects</Heading>
+                <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 0.1 } }} overrides='mb-14 text-5xl lg:text-7xl mb-6 mt-6 text-main-light' >Featured Projects</Heading>
 
                 <Div overrides='flex flex-wrap gap-16 justify-center'>
                     {ProjectsList && ProjectsList.map((project, index) => {
