@@ -170,22 +170,22 @@ const NavigationComponent = () => {
           <Div overrides='hidden w-full lg:block lg:w-auto'>
             <ul className='font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white'>
               <li onClick={() => onSectionClick({ elementClassName: 'hero' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'hero' })} bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0`} aria-current='page'>Home</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'hero' })} bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 text-lg`} aria-current='page'>Home</a>
               </li>
               <li onClick={() => onSectionClick({ elementClassName: 'about' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'about' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>About</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'about' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 text-lg`}>About</a>
               </li>
               <li onClick={() => onSectionClick({ elementClassName: 'experience' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'experience' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Experience</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'experience' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 text-lg`}>Experience</a>
               </li>
               <li onClick={() => onSectionClick({ elementClassName: 'projects' })}>
-                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'projects' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Projects</a>
+                <a href='#' className={`block py-2 px-3 duration-500 ${navigationTextColor} ${checkIfInSection({ section: 'projects' })} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 text-lg`}>Projects</a>
               </li>
               <li>
-                <a target='_blank' href='https://drive.google.com/file/d/1evTroPQysDvLXgTliyGe-n3UbZR6IVzs/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>Resume</a>
+                <a target='_blank' href='https://drive.google.com/file/d/1evTroPQysDvLXgTliyGe-n3UbZR6IVzs/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 text-lg`}>Resume</a>
               </li>
               <li>
-                <a target='_blank' href='https://drive.google.com/file/d/1MiGGrTrHBLtBRhhuE1otrm23EaS5JUYM/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0`}>CV</a>
+                <a target='_blank' href='https://drive.google.com/file/d/1MiGGrTrHBLtBRhhuE1otrm23EaS5JUYM/view?usp=sharing' className={`block py-2 px-3 duration-500 ${navigationTextColor} rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 text-lg`}>CV</a>
               </li>
 
             </ul>

@@ -10,7 +10,9 @@ import './globals.css';
 import { Footer, Loading } from '@/components';
 import { Div } from '@/design-system/Div';
 import { Projects } from './_components/Projects';
-
+import '@fontsource/montserrat'; // Importing Montserrat font
+import '@fontsource/inter'; // Importing Inter font
+import '@fontsource/sora'; // Importing Sora font
 
 const montserrat = Montserrat({
   subsets: ['latin'],
