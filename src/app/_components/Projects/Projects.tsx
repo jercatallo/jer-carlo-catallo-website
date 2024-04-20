@@ -50,7 +50,7 @@ export const Projects = () => {
                             <img className='project-image rounded rotate-2 m-auto bordered w-4/5 py-12 h-auto' src={project.image} alt={`${project.title}`}></img>
                             <Div overrides='p-4'>
                                 <Heading overrides='text-2xl my-0 text-main-light font-bold'>{project.title}</Heading>
-                                <Paragraph overrides='text-md my-0 text-main-light'>{project.description}</Paragraph>
+                                <Paragraph overrides='text-sm lg:text-md my-0 text-main-light'>{project.description}</Paragraph>
                                 <Div overrides='flex py-4 gap-3 flex-wrap'>
                                     {project.techstacks.map((tech) => {
                                         if(TechStacksMapping[tech]){
