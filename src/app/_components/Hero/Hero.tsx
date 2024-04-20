@@ -18,7 +18,7 @@ export const Hero = () => {
                         <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 1.2 } }} type='h2' overrides='text-3xl my-6 mt-0 text-primary-color-2'>
                             Software Engineer
                         </Heading>
-                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 1.5 } }} overrides='max-w-3xl text-lg'>
+                        <Paragraph framerMotionProps={{ variants: fadeInUp, transition: { duration: 1, delay: 1.5 } }} overrides='max-w-3xl text-sm lg:text-lg'>
                             Hey there! I&apos;m a devoted Software Engineer, crafting robust websites and apps. Dive into my digital world to explore the stories behind each line of code – tales of dedication and inventive solutions. Curious? Let&apos;s journey together!
                         </Paragraph>
                         <Div overrides='flex gap-2 mt-5 flex-wrap'>
