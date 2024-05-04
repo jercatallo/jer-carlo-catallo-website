@@ -15,7 +15,7 @@ export const About = () => {
         url("${process.env.IMAGE_URL}/forest.jpg") center/cover no-repeat fixed`,
         }} className="snap-align-none lg:snap-center relative bg-center bg-no-repeat h-fit lg:5/6 grid items-center px-4">
             <Div overrides='about overflow-hidden max-w-7xl justify-center mx-auto p-1 relative grid items-center mt-auto' >
-                <Div overrides='mt-12 grid py-24 lg:grid-cols-2 items-center'>
+                <Div overrides='mt-12 grid py-8 lg:grid-cols-2 items-center'>
                     <Div>
                         <Heading framerMotionProps={{ variants: fadeInUp, transition: { duration: 1 } }} overrides='text-5xl lg:text-7xl mt-0 text-main-light mb-3'>
                             Hi there, I&apos;m Jer!

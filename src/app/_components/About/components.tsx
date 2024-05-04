@@ -18,13 +18,13 @@ type InfoBoxContainerProps = {
 }
 
 export const TechSkill = ({ children, framerMotionProps }: TechSkillProps) => {
-    return <Span framerMotionProps={framerMotionProps} overrides='text-main-light border-solid border rounded text-sm px-2 py-1 grid items-center'>{children}</Span>;
+    return <Span framerMotionProps={framerMotionProps} overrides='text-main-light border-solid border rounded text-xs lg:text-sm px-2 py-1 grid items-center'>{children}</Span>;
 };
 
 
 export const InfoBox = ({ data, value }: InfoBoxProps) => {
     return <Div overrides="info py-4 border-white border-2 text-center bg-background grid rounded items-center content-center">
-        <Div overrides="info-value font-bold text-sm">{value}</Div>
+        <Div overrides="info-value font-bold text-xs lg:text-sm">{value}</Div>
 
         <Div overrides="info-data text-xs">{data}</Div>
     </Div>;
