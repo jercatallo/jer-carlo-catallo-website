@@ -1,5 +1,5 @@
 # Hi! I'm Jer Carlo Catallo <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px" height="30px">
-I'm Jer Carlo Catallo, and I'm excited to showcase my portfolio to you! Here, you'll find a collection of my projects, experiences, and skills. My portfolio is a reflection of my passion for technology, design, and innovation. From front-end development to cloud hosting and server management, I've got it all covered. Take a look around, and feel free to reach out if you have any questions or would like to collaborate!
+I'm excited to showcase my portfolio to you! Here, you'll find a collection of my projects, experiences, and skills. My portfolio is a reflection of my passion for technology, design, and innovation. From front-end development to cloud hosting and server management, I've got it all covered. Take a look around, and feel free to reach out if you have any questions or would like to collaborate!
 
 You can access my portfolio at [Jer Carlo Catallo Portfolio](https://jercarlocatallo.com/). Let's dive in and explore what I have to offer!
 
